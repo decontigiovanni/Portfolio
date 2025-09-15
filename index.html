@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - De Conti Giovanni</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+
     <!-- Header -->
     <header>
         <h1>Giovanni De Conti</h1>
@@ -20,10 +22,30 @@
 
     </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 De Conti Giovanni - <a href="mailto:decontigiovanni@email.com">Contattami</a></p>
-    </footer>
+    <div class="footer-bar">
+        <div class="marquee">
+            <span>Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - </span>
+            <span>Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - </span>
+        </div>
+    </div>
+
+
+
+    <!-- tutto il contenuto della pagina -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script>
+        const marquee = document.querySelector(".marquee");
+        const spanWidth = marquee.querySelector("span").offsetWidth;
+
+        gsap.to(marquee, {
+            x: -spanWidth,
+            duration: 15,
+            ease: "linear",
+            repeat: -1
+        });
+    </script>
+
+
 </body>
 
 </html>
