@@ -1,0 +1,42 @@
+                    /* Reset di base */
+                    
+                    @font-face {
+                        font-family: "PPNeue";
+                        /* Nome che userai nel CSS */
+                        src: url("../fonts/PPNeueMontreal-Book.otf") format("truetype");
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    /* Font e colori */
+                    
+                    body {
+                        font-family: "PPNeue";
+                        color: #ffffff;
+                        background-color: #000000;
+                        line-height: 1.2;
+                        max-width: 1920px;
+                        margin: 20px;
+                        padding: 10pxpx;
+                    }
+                    
+                    header {
+                        text-align: left;
+                        margin-bottom: 40px;
+                    }
+                    
+                    h1 {
+                        font-size: 4rem;
+                        margin-bottom: 5px;
+                    }
+                    
+                    footer {
+                        text-align: left;
+                        margin-top: 50px;
+                        font-size: 0.9rem;
+                    }
