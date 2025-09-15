@@ -12,15 +12,17 @@
 <body>
 
     <!-- Header -->
-    <header>
-        <h1>Giovanni De Conti</h1>
-        <h1> Startegic Product Designer</h1>
-        <h1> +39 329 277 3046</h1>
-        <h1> arcadiaproject.studio</h1>
-        <h1> Linkedin</h1>
-        <h1> Portfolio</h1>
 
+    <header>
+        <h1 class="hover-link">Giovanni De Conti</h1>
+        <h1 class="hover-link">Strategic Product Designer</h1>
+        <h1 class="hover-link">+39 329 277 3046</h1>
+        <h1 class="hover-link">arcadiaproject.studio</h1>
+        <h1 class="hover-link">LinkedIn</h1>
+        <h1 class="hover-link">Portfolio</h1>
     </header>
+
+
 
     <div class="footer-bar">
         <div class="marquee">
@@ -28,6 +30,14 @@
             <span>Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - </span>
         </div>
     </div>
+
+    <div class="photo-stack">
+        <img src="Immagini/DSCF0106.JPG" alt="Foto 1">
+        <img src="Immagini/DSCF0118.JPG" alt="Foto 2">
+        <img src="Immagini/DSCF0167.JPG" alt="Foto 3">
+        <img src="Immagini/DSCF0169.JPG" alt="Foto 4">
+    </div>
+
 
 
 
@@ -42,6 +52,32 @@
             duration: 15,
             ease: "linear",
             repeat: -1
+        });
+    </script>
+    <script>
+        // Anima tutti gli <h1> dentro l'header
+        gsap.to("header h1", {
+            opacity: 1,
+            y: 0, // da translateY(-30px) a 0
+            filter: "saturate(1)", // da desaturato a normale
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.2 // delay progressivo tra le scritte
+        });
+    </script>
+    <script>
+        const photos = document.querySelectorAll(".photo-stack img");
+
+        photos.forEach((photo, i) => {
+            gsap.to(photo, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 1,
+                delay: i * 10, // ogni foto dopo 5s dalla precedente
+                ease: "power2.out",
+                rotation: gsap.utils.random(-5, 5) // angolo casuale
+            });
         });
     </script>
 

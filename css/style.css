@@ -23,8 +23,8 @@ body {
     background-color: #000000;
     line-height: 1.2;
     max-width: 1920px;
-    margin: 20px;
-    padding: 10pxpx;
+    margin: 0px;
+    padding: 10px;
 }
 
 
@@ -40,6 +40,18 @@ body {
 header {
     text-align: left;
     margin-bottom: 40px;
+}
+
+
+/* Stato iniziale dei titoli per l'animazione */
+
+header h1 {
+    opacity: 0;
+    /* invisibile */
+    transform: translateY(-20px);
+    /* leggermente sopra */
+    filter: saturate(0);
+    /* desaturato */
 }
 
 h1 {
@@ -69,4 +81,63 @@ h1 {
     font-size: 1.2rem;
     color: #000;
     padding-right: 2px;
+}
+
+.hover-link {
+    display: inline-block;
+    /* importante per lavorare con padding */
+    width: 100%;
+    /* forza l'andare a capo */
+    position: relative;
+    padding-left: 0;
+    /* di base nessun padding */
+    color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-link::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #01FF8B;
+    /* stessa tinta della scritta in hover */
+}
+
+.hover-link:hover {
+    color: #01FF8B;
+    /* cambia colore testo */
+    padding-left: 60px;
+    /* spazio per la freccia */
+}
+
+.hover-link:hover::before {
+    opacity: 1;
+    /* la freccia diventa visibile */
+}
+
+.photo-stack {
+    position: fixed;
+    bottom: 0px;
+    right: 40px;
+    width: 600px;
+    height: 600px;
+    pointer-events: none;
+    /* così non interferisce con clic */
+}
+
+.photo-stack img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 100px;
+    right: 10px;
+    opacity: 0;
+    /* inizialmente invisibili */
+    transform: translateY(-30px) scale(0.95) rotate(10deg);
+    /* partenza */
+    border-radius: 0px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
