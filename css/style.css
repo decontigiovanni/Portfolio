@@ -25,7 +25,6 @@ body {
     width: 100vh;
     height: 100vh;
     padding: 10px;
-    overflow:
 }
 
 
@@ -118,18 +117,24 @@ h1 {
     /* così non interferisce con clic */
 }
 
+.photo-stack {
+    position: fixed;
+    bottom: 300px;
+    right: 400px;
+    width: 400px;
+    /* quarto dello schermo, regola come vuoi */
+    height: 300px;
+    pointer-events: auto;
+}
+
 .photo-stack img {
     position: absolute;
-    width: 100%;
+    width: 180%;
     height: auto;
-    bottom: auto;
-    right: 10px;
     opacity: 0;
-    /* inizialmente invisibili */
-    transform: translateY(10px) scale(0.95) rotate(10deg);
-    /* partenza */
+    transform: translateY(30px) scale(0.95) rotate(10deg);
     border-radius: 0px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    pointer-events: auto;
 }
 
 a {
