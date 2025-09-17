@@ -13,14 +13,18 @@
 
     <!-- Header -->
 
+
+
     <header>
+        <h1 id="my-text"></h1>
         <h1 class="hover-link">Giovanni De Conti</h1>
         <h1 class="hover-link">Strategic Product Designer</h1>
-        <h1 class="hover-link">+39 329 277 3046</h1>
-        <h1 class="hover-link">arcadiaproject.studio</h1>
-        <h1 class="hover-link">LinkedIn</h1>
+        <h1> <a href="https://wa.me/393292773046" target="_blank" class="hover-link"> +39 329 277 3046 </a> </h1>
+        <h1> <a href="https://arcadiaproject.studio" target="_blank" class="hover-link"> arcadiaproject.studio </a> </h1>
+        <h1> <a href="https://www.linkedin.com/in/giovanni-de-conti/" target="_blank" class="hover-link"> Linkedin </a> </h1>
         <h1 class="hover-link">Portfolio</h1>
     </header>
+
 
 
 
@@ -32,8 +36,8 @@
     </div>
 
     <div class="photo-stack">
-        <img src="Immagini/DSCF0106.JPG" alt="Foto 1">
-        <img src="Immagini/DSCF0118.JPG" alt="Foto 2">
+        <img src="Immagini/DSCF0215.JPG" alt="Foto 1">
+        <img src="Immagini/DSCF0388.JPG" alt="Foto 2">
         <img src="Immagini/DSCF0167.JPG" alt="Foto 3">
         <img src="Immagini/DSCF0169.JPG" alt="Foto 4">
     </div>
@@ -43,6 +47,21 @@
 
     <!-- tutto il contenuto della pagina -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <!-- Minified UMD bundle -->
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        const myTitles = new SplitType("header h1", {
+            types: "chars"
+        });
+        // 2. Anima tutti i caratteri
+        gsap.from(".char", {
+            y: -100, // le lettere partono da 
+            opacity: 0, // partono invisibili
+            stagger: 0.02, // piccolo delay tra una lettera e l'altra
+            duration: 0.6, // velocità animazione
+            ease: "power3.out"
+        });
+    </script>
     <script>
         const marquee = document.querySelector(".marquee");
         const spanWidth = marquee.querySelector("span").offsetWidth;
@@ -56,14 +75,14 @@
     </script>
     <script>
         // Anima tutti gli <h1> dentro l'header
-        gsap.to("header h1", {
-            opacity: 1,
-            y: 0, // da translateY(-30px) a 0
-            filter: "saturate(1)", // da desaturato a normale
-            duration: 0.5,
-            ease: "power2.out",
-            stagger: 0.2 // delay progressivo tra le scritte
-        });
+        /*      gsap.to("header h1", {
+                  opacity: 1,
+                  y: 0, // da translateY(-30px) a 0
+                  filter: "saturate(1)", // da desaturato a normale
+                  duration: 0.5,
+                  ease: "power2.out",
+                  stagger: 0 // delay progressivo tra le scritte
+              }); */
     </script>
     <script>
         const photos = document.querySelectorAll(".photo-stack img");
@@ -80,8 +99,6 @@
             });
         });
     </script>
-
-
 </body>
 
 </html>
