@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - De Conti Giovanni</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <a></a>
+    <header>
+        <h1 class="hover-link">Giovanni De Conti</h1>
+        <h1> <a href="https://www.tudelft.nl/onderwijs/opleidingen/masters/spd/msc-strategic-product-design/" target="_blank" class="hover-link"> Strategic Product Designer</a>
+        </h1>
+        <h1>
+            <a href="https://wa.me/393292773046" target="_blank" class="hover-link">+39 329 277 3046</a>
+        </h1>
+        <h1>
+            <a href="https://arcadiaproject.studio" target="_blank" class="hover-link">arcadiaproject.studio</a>
+        </h1>
+        <h1>
+            <a href="https://www.linkedin.com/in/giovanni-de-conti/" target="_blank" class="hover-link">Linkedin</a>
+        </h1>
+        <h1 class="hover-link"><a href="portfolio.html">Portfolio</a></h1>
+
+    </header>
+
+    <!-- Footer bar con marquee -->
+    <div class="footer-bar">
+        <div class="marquee">
+            <span>Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - </span>
+            <span>Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - Let's work together - </span>
+        </div>
+    </div>
+
+    <!-- Photo stack -->
+    <div class="photo-stack">
+        <img src="Immagini/03.jpg" alt="Foto 1">
+        <img src="Immagini/08.jpg" class="vertical" alt="Foto 2">
+        <img src="Immagini/10.jpg" alt="Foto 3">
+        <img src="Immagini/13.jpg" class="vertical" alt="Foto 4">
+        <img src="Immagini/14.jpg" alt="Foto 5">
+        <img src="Immagini/16.jpg" alt="Foto 6">
+        <img src="Immagini/27.jpg" class="vertical" alt="Foto 7">
+        <img src="Immagini/26.jpg" alt="Foto 8">
+        <img src="Immagini/15.jpg" alt="Foto 9">
+        <img src="Immagini/24.jpg" alt="Foto 10">
+        <img src="Immagini/23.jpg" alt="Foto 11">
+        <img src="Immagini/22.jpg" class="vertical" alt="Foto 12">
+        <img src="Immagini/21.jpg" class="vertical" alt="Foto 13">
+        <img src="Immagini/20.jpg" alt="Foto 14">
+        <img src="Immagini/19.jpg" class="vertical" alt="Foto 15">
+        <img src="Immagini/18.jpg" alt="Foto 16">
+        <img src="Immagini/17.jpg" alt="Foto 17">
+        <!-- <img src="Immagini/01.jpg" alt="Foto 18"> troppo grande probabilmente -->
+        <img src="Immagini/02.jpg" alt="Foto 19">
+        <img src="Immagini/04.jpg" class="vertical" alt="Foto 20">
+        <img src="Immagini/05.jpg" class="vertical" alt="Foto 21">
+        <img src="Immagini/07.jpg" class="vertical" alt="Foto 22">
+        <img src="Immagini/09.jpg" class="vertical" alt="Foto 23">
+        <!-- <img src="Immagini/12.jpg" class="vertical" alt="Foto 24"> troppo grande probabilmente -->
+        <img src="Immagini/13.jpg" class="vertical" alt="Foto 25">
+        <img src="Immagini/28.jpg" alt="Foto 26">
+        <img src="Immagini/29.jpg" class="vertical" alt="Foto 27">
+        <img src="Immagini/30.jpg" alt="Foto 28">
+
+
+    </div>
+
+    <!-- Script GSAP e SplitType -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js"></script>
+
+
+    <script>
+        // Split delle lettere
+        const myTitles = new SplitType("header h1", {
+            types: "chars"
+        });
+
+        // Animazione delle lettere dal basso
+        gsap.from(".char", {
+            y: 100,
+            opacity: 0,
+            stagger: 0.01,
+            duration: 0.6,
+            ease: "power3.out"
+        });
+    </script>
+
+    <script>
+        // Marquee
+        const marquee = document.querySelector(".marquee");
+        const spanWidth = marquee.querySelector("span").offsetWidth;
+
+        gsap.to(marquee, {
+            x: -spanWidth,
+            duration: 15,
+            ease: "linear",
+            repeat: -1
+        });
+    </script>
+
+    <script>
+        // Photo stack
+        const photos = Array.from(document.querySelectorAll(".photo-stack img"));
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        let shuffledPhotos = shuffle([...photos]);
+        let index = 0;
+
+        function showNextPhoto() {
+            const photo = shuffledPhotos[index];
+
+            photos.forEach(p => p.style.zIndex = 0);
+            photo.style.zIndex = 1;
+
+            Draggable.create(photo, {
+                type: "x,y", // can drag in both directions
+                inertia: true // gives a natural throw effect
+            });
+
+            gsap.fromTo(photo, {
+                opacity: 0,
+                y: 20,
+                scale: 0.95,
+                rotate: gsap.utils.random(-15, 15)
+            }, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.9,
+                ease: "power3.out"
+            });
+            gsap.to(photo, {
+                opacity: 0,
+                y: -20,
+                scale: 0.9,
+                duration: 0.8,
+                delay: 4,
+                onComplete: () => {
+                    // reset transform for next time
+                    gsap.set(photo, {
+                        x: 0,
+                        y: 0
+                    });
+                }
+            });
+
+
+
+
+            index++;
+            if (index >= shuffledPhotos.length) {
+                shuffledPhotos = shuffle([...photos]);
+                index = 0;
+            }
+        }
+
+        showNextPhoto();
+        setInterval(showNextPhoto, 5000);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                const photoStack = document.querySelector('.photo-stack');
+                if (photoStack) {
+                    photoStack.classList.add('visible');
+                }
+            }, 2000); // 2000 ms = 2 secondi
+        });
+    </script>
+
+
+</body>
+
+</html>

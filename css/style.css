@@ -1,0 +1,402 @@
+/* Reset di base */
+
+@font-face {
+    font-family: "PPNeue";
+    /* Nome che userai nel CSS */
+    src: url("../fonts/PPNeueMontreal-Book.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Font e colori */
+
+body {
+    font-family: "PPNeue";
+    color: #ffffff;
+    background-color: #000000;
+    line-height: 1.2;
+    width: 200vh;
+    height: 100vh;
+    padding: 10px;
+}
+
+
+/* per rendere il testo evidenziato personalizzato*/
+
+::selection {
+    background-color: #01FF8B;
+    /* colore dello sfondo della selezione */
+    color: #000000;
+    /* colore del testo selezionato */
+}
+
+header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    /* line-height: 3.9rem; */
+}
+
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #01FF8B;
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+}
+
+.marquee span {
+    font-family: "PPNeue", sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+    padding-right: 2px;
+}
+
+.hover-link {
+    display: inline-block;
+    /* importante per lavorare con padding */
+    width: 100%;
+    /* forza l'andare a capo */
+    position: relative;
+    padding-left: 0;
+    /* di base nessun padding */
+    color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-link::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #01FF8B;
+    /* stessa tinta della scritta in hover */
+}
+
+.hover-link:hover {
+    color: #01FF8B;
+    /* cambia colore testo */
+    padding-left: 3rem;
+    /* spazio per la freccia */
+}
+
+.hover-link:hover::before {
+    opacity: 1;
+    /* la freccia diventa visibile */
+}
+
+.hover-link2 {
+    display: inline-block;
+    /* importante per lavorare con padding */
+    width: 100%;
+    /* forza l'andare a capo */
+    position: relative;
+    padding-left: 0;
+    /* di base nessun padding */
+    color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-link2::before {
+    content: "←";
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #01FF8B;
+    /* stessa tinta della scritta in hover */
+}
+
+.hover-link2:hover {
+    color: #01FF8B;
+    /* cambia colore testo */
+    padding-left: 3rem;
+    /* spazio per la freccia */
+}
+
+.hover-link2:hover::before {
+    opacity: 1;
+    /* la freccia diventa visibile */
+}
+
+.photo-stack {
+    position: fixed;
+    bottom: 390px;
+    right: 350px;
+    width: 400px;
+    /* quarto dello schermo, regola come vuoi */
+    height: 270px;
+    pointer-events: auto;
+}
+
+.photo-stack img {
+    position: absolute;
+    width: 160%;
+    height: auto;
+    opacity: 0;
+    border-radius: 0px;
+    pointer-events: auto;
+}
+
+.photo-stack img.vertical {
+    position: absolute;
+    right: -150px;
+    max-height: 200%;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    /* rimuove la sottolineatura */
+    color: inherit;
+    /* eredita il colore dal genitore (es. h1) */
+}
+
+.char {
+    display: inline-block;
+}
+
+.photo-stack {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.photo-stack.visible {
+    opacity: 1;
+}
+
+
+/* ------------------------------ */
+
+
+/* MEDIA QUERIES RESPONSIVE CSS   */
+
+
+/* ------------------------------ */
+
+
+/* Tablet e schermi medi */
+
+@media (max-width: 1024px) {
+    body {
+        width: 100%;
+        /* niente larghezza fissa */
+        height: auto;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2.5rem;
+        /* più piccolo */
+        line-height: 1.3;
+    }
+    .photo-stack {
+        bottom: 150px;
+        right: 100px;
+        width: 300px;
+        height: 250px;
+    }
+    .photo-stack img {
+        width: 120%;
+    }
+    .hover-link {
+        display: inline-block;
+        /* importante per lavorare con padding */
+        width: 100%;
+        /* forza l'andare a capo */
+        position: relative;
+        padding-left: 0;
+        /* di base nessun padding */
+        color: #ffffff;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .hover-link::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        color: #01FF8B;
+        /* stessa tinta della scritta in hover */
+    }
+    .hover-link:hover {
+        color: #01FF8B;
+        /* cambia colore testo */
+        padding-left: 2.5rem;
+        /* spazio per la freccia */
+    }
+    .hover-link:hover::before {
+        opacity: 1;
+        /* la freccia diventa visibile */
+    }
+    .hover-link2 {
+        display: inline-block;
+        /* importante per lavorare con padding */
+        width: 100%;
+        /* forza l'andare a capo */
+        position: relative;
+        padding-left: 0;
+        /* di base nessun padding */
+        color: #ffffff;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .hover-link2::before {
+        content: "←";
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        color: #01FF8B;
+        /* stessa tinta della scritta in hover */
+    }
+    .hover-link2:hover {
+        color: #01FF8B;
+        /* cambia colore testo */
+        padding-left: 2.5rem;
+        /* spazio per la freccia */
+    }
+    .hover-link2:hover::before {
+        opacity: 1;
+        /* la freccia diventa visibile */
+    }
+}
+
+
+/* Smartphone */
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 15px;
+    }
+    header {
+        margin-bottom: 20px;
+        text-align: left;
+        /* centrato su mobile */
+    }
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    .footer-bar {
+        height: 40px;
+    }
+    .marquee span {
+        font-size: 1rem;
+    }
+    .photo-stack {
+        position: relative;
+        /* non più fixed, segue lo scroll */
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .photo-stack img {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+    }
+    .hover-link {
+        display: inline-block;
+        /* importante per lavorare con padding */
+        width: 100%;
+        /* forza l'andare a capo */
+        position: relative;
+        padding-left: 0;
+        /* di base nessun padding */
+        color: #ffffff;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .hover-link::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        color: #01FF8B;
+        /* stessa tinta della scritta in hover */
+    }
+    .hover-link:hover {
+        color: #01FF8B;
+        /* cambia colore testo */
+        padding-left: 2rem;
+        /* spazio per la freccia */
+    }
+    .hover-link:hover::before {
+        opacity: 1;
+        /* la freccia diventa visibile */
+    }
+    .hover-link2 {
+        display: inline-block;
+        /* importante per lavorare con padding */
+        width: 100%;
+        /* forza l'andare a capo */
+        position: relative;
+        padding-left: 0;
+        /* di base nessun padding */
+        color: #ffffff;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .hover-link2::before {
+        content: "←";
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        color: #01FF8B;
+        /* stessa tinta della scritta in hover */
+    }
+    .hover-link2:hover {
+        color: #01FF8B;
+        /* cambia colore testo */
+        padding-left: 2rem;
+        /* spazio per la freccia */
+    }
+    .hover-link2:hover::before {
+        opacity: 1;
+        /* la freccia diventa visibile */
+    }
+}
+
+
+/* Extra piccolo (es. <480px) */
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    .marquee span {
+        font-size: 0.9rem;
+    }
+}
