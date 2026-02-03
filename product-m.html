@@ -20,7 +20,6 @@
             <p class="cart-empty">Your cart is empty. Add items to see them here.</p>
         </div>
         <div class="cart-actions">
-            <button class="btn btn-outline">View cart</button>
             <button class="btn btn-solid">Checkout</button>
         </div>
     </aside>
@@ -29,20 +28,22 @@
         <span class="line-header"></span>
         <h1 class="store-title">LA SACCA - M</h1>
         <span class="line-header"></span>
-        <span class="line-header-gap"></span>
+        <div class="store-header-marquee">
+            <div class="store-header-marquee-track">
+                <span>Pre orders are now available - Pre orders are now available - Pre orders are now available - Pre orders are now available - Pre orders are now available - Pre orders are now available - </span>
+                <span>Pre orders are now available - Pre orders are now available - Pre orders are now available - Pre orders are now available - Pre orders are now available - Pre orders are now available - </span>
+            </div>
+        </div>
     </header>
-
-    <div class="line-full"></div>
-    <div class="line-full"></div>
 
     <div class="product-body">
         <div class="split-line"></div>
         <main class="product-main">
             <section class="product-gallery">
-                <div class="gallery-frame"><img src="Immagini/02.png" alt="LA SACCA - M"></div>
-                <div class="gallery-frame"><img src="Immagini/02.png" alt="LA SACCA - M"></div>
-                <div class="gallery-frame"><img src="Immagini/02.png" alt="LA SACCA - M"></div>
-                <div class="gallery-frame"><img src="Immagini/02.png" alt="LA SACCA - M"></div>
+                <div class="gallery-frame"><img src="freitag placeholder/freitag_2_placeholder.jpg" alt="Freitag placeholder product 2"></div>
+                <div class="gallery-frame"><img src="freitag placeholder/freitag_2_placeholder_hover.jpg" alt="Freitag placeholder product 2 hover"></div>
+                <div class="gallery-frame"><img src="freitag placeholder/freitag_2_placeholder.jpg" alt="Freitag placeholder product 2"></div>
+                <div class="gallery-frame"><img src="freitag placeholder/freitag_2_placeholder_hover.jpg" alt="Freitag placeholder product 2 hover"></div>
             </section>
 
             <section class="product-details">
@@ -50,32 +51,69 @@
                     <h2>LA SACCA - M</h2>
                     <p class="product-price">70€</p>
                 </div>
-                <p class="product-description">“La Sacca – Modello M” is a small, handcrafted bag designed for everyday use, inspired by the minimalist and functional aesthetics of urban upcycled design. Every piece is made by hand, making each bag unique and one-of-a-kind.</p>
-                <div class="product-list">
-                    <p>Materials & Craftsmanship:</p>
-                    <ul>
-                        <li>Constructed from high-quality, durable materials, chosen for their texture and longevity.</li>
-                        <li>Hand-stitched with attention to detail, ensuring both strength and aesthetic appeal.</li>
-                        <li>Minimalist design with functional compartments for essentials like phone, wallet, and keys.</li>
-                    </ul>
-                    <p>Dimensions:</p>
-                    <ul>
-                        <li>Width: 20 cm</li>
-                        <li>Height: 15 cm</li>
-                        <li>Depth: 8 cm</li>
-                        <li>Lightweight and compact, perfect for everyday carry.</li>
-                    </ul>
-                </div>
+                <p class="product-description">La Sacca - M: handcrafted everyday bag, upcycled urban style, minimalist layout, unique piece.</p>
+                <details class="product-readmore">
+                    <summary>Read more</summary>
+                    <div class="product-list">
+                        <p>Materials & Craftsmanship</p>
+                        <ul>
+                            <li>High-resistance materials</li>
+                            <li>Hand-stitched finish</li>
+                            <li>Functional compartments: phone, wallet, keys</li>
+                        </ul>
+                        <p>Dimensions</p>
+                        <ul>
+                            <li>Width: 20 cm</li>
+                            <li>Height: 15 cm</li>
+                            <li>Depth: 8 cm</li>
+                            <li>Lightweight, compact, daily carry</li>
+                        </ul>
+                    </div>
+                </details>
 
                 <div class="product-actions">
-                    <button class="btn btn-outline">Add to cart</button>
+                    <button class="btn btn-outline" data-add-to-cart data-product-id="la-sacca-m" data-product-name="LA SACCA - M" data-product-price="70">Add to cart</button>
                     <button class="btn btn-solid">Paypal (Paypal)</button>
                 </div>
 
                 <div class="product-links">
-                    <a href="shipping.html" class="hover-link">Shipping policy</a>
-                    <a href="refund.html" class="hover-link">Refund policy</a>
-                    <a href="mailto:info@example.com" class="hover-link">Contacts</a>
+                    <details class="policy-item">
+                        <summary>Shipping policy</summary>
+                        <div class="policy-panel">
+                            <p>Preorder dispatch window: 7-14 business days from payment confirmation.</p>
+                            <ul>
+                                <li>Tracked shipping with an email update when the parcel is collected.</li>
+                                <li>Italy delivery: usually 24-72h after dispatch.</li>
+                                <li>EU and international delivery: 4-10 business days depending on customs.</li>
+                                <li>Import duties and local taxes are not included.</li>
+                            </ul>
+                            <a href="shipping.html" class="policy-panel-link">Open full shipping policy page</a>
+                        </div>
+                    </details>
+                    <details class="policy-item">
+                        <summary>Refund policy</summary>
+                        <div class="policy-panel">
+                            <p>Each bag is handmade and one-of-a-kind, so minor marks and asymmetries are part of the design.</p>
+                            <ul>
+                                <li>No refunds for change of mind or wrong size choice.</li>
+                                <li>If a package arrives damaged, contact us within 48 hours with photos.</li>
+                                <li>After review, we can offer repair support or store credit case by case.</li>
+                            </ul>
+                            <a href="refund.html" class="policy-panel-link">Open full refund policy page</a>
+                        </div>
+                    </details>
+                    <details class="policy-item">
+                        <summary>Contacts</summary>
+                        <div class="policy-panel">
+                            <p>Support availability: Monday-Friday, 10:00-18:00 CET.</p>
+                            <p>For faster help, include your order number and product name in your message.</p>
+                            <div class="policy-panel-links">
+                                <a href="mailto:info@example.com" class="policy-panel-link">Email</a>
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="policy-panel-link">Instagram</a>
+                                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="policy-panel-link">YouTube</a>
+                            </div>
+                        </div>
+                    </details>
                 </div>
             </section>
         </main>
@@ -85,12 +123,27 @@
     <div class="line-full"></div>
 
     <footer class="page-footer">
-        <div class="footer-links">
-            <a href="https://www.instagram.com/" target="_blank" class="hover-link">Instagram</a>
-            <a href="https://www.youtube.com/" target="_blank" class="hover-link">YouTube</a>
-            <a href="mailto:info@example.com" class="hover-link">Contact</a>
-            <a href="shipping.html" class="hover-link">Shipping policy</a>
-            <a href="refund.html" class="hover-link">Refund policy</a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <p class="footer-kicker">Giovanni De Conti Lab</p>
+                <p>Independent upcycled bags and visual experiments, handcrafted in limited runs.</p>
+            </div>
+            <div class="footer-block">
+                <p class="footer-heading">Social</p>
+                <a href="https://www.instagram.com/" target="_blank" class="footer-link">Instagram</a>
+                <a href="https://www.youtube.com/" target="_blank" class="footer-link">YouTube</a>
+                <a href="mailto:info@example.com" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-block">
+                <p class="footer-heading">Support</p>
+                <a href="shipping.html" class="footer-link">Shipping policy</a>
+                <a href="refund.html" class="footer-link">Refund policy</a>
+                <a href="index.html" class="footer-link">Home</a>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <span>&copy; 2026 Giovanni De Conti</span>
+            <span>Made in Italy - Independent project</span>
         </div>
     </footer>
 
@@ -103,19 +156,113 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
+    <script src="js/cart.js"></script>
     <script>
-        const myTitles = new SplitType("header h1", { types: "chars" });
-        gsap.from(".char", { y: 80, opacity: 0, stagger: 0.01, duration: 0.6, ease: "power3.out" });
+        const myTitles = new SplitType("header h1", {
+            types: "chars"
+        });
+        gsap.from(".char", {
+            y: 80,
+            opacity: 0,
+            stagger: 0.01,
+            duration: 0.6,
+            ease: "power3.out"
+        });
 
-        const marquee = document.querySelector(".marquee");
-        const spanWidth = marquee.querySelector("span").offsetWidth;
-        gsap.to(marquee, { x: -spanWidth, duration: 15, ease: "linear", repeat: -1 });
+        function animateMarquee(selector, direction) {
+            const track = document.querySelector(selector);
+            if (!track) return;
+            const firstSpan = track.querySelector("span");
+            if (!firstSpan) return;
+
+            const spanWidth = firstSpan.offsetWidth;
+            if (direction === "right") {
+                gsap.fromTo(track, {
+                    x: -spanWidth
+                }, {
+                    x: 0,
+                    duration: 15,
+                    ease: "linear",
+                    repeat: -1
+                });
+            } else {
+                gsap.fromTo(track, {
+                    x: 0
+                }, {
+                    x: -spanWidth,
+                    duration: 15,
+                    ease: "linear",
+                    repeat: -1
+                });
+            }
+        }
+
+        animateMarquee(".footer-bar .marquee", "left");
+        animateMarquee(".store-header-marquee-track", "right");
 
         const cartToggle = document.querySelector('.cart-toggle');
         const cartPanel = document.getElementById('cartPanel');
         cartToggle.addEventListener('click', () => {
             const isOpen = cartPanel.classList.toggle('open');
             cartToggle.classList.toggle('active', isOpen);
+        });
+
+        const policyRoot = document.querySelector('.product-links');
+        const policyItems = Array.from(document.querySelectorAll('.product-links .policy-item'));
+
+        function layoutPolicyPanels() {
+            if (!policyRoot) return;
+            let stackedTop = 0;
+            const itemsFromBottom = [...policyItems].reverse();
+            const zMax = itemsFromBottom.length + 2;
+
+            itemsFromBottom.forEach((item, index) => {
+                const panel = item.querySelector('.policy-panel');
+                const summary = item.querySelector('summary');
+                if (!panel || !summary) return;
+
+                if (!item.open) {
+                    return;
+                }
+
+                const baseBottom = policyRoot.clientHeight - summary.offsetTop;
+                const panelHeight = panel.getBoundingClientRect().height || panel.offsetHeight;
+                const nextBottom = Math.max(baseBottom, stackedTop);
+
+                item.style.setProperty('--policy-bottom', `${nextBottom}px`);
+                item.style.setProperty('--policy-z', `${zMax - index}`);
+                stackedTop = nextBottom + panelHeight;
+            });
+        }
+
+        policyItems.forEach((item) => {
+            item.addEventListener('toggle', () => {
+                layoutPolicyPanels();
+                requestAnimationFrame(layoutPolicyPanels);
+            });
+        });
+
+        window.addEventListener('load', layoutPolicyPanels);
+        window.addEventListener('resize', layoutPolicyPanels);
+        layoutPolicyPanels();
+
+        if ('ResizeObserver' in window) {
+            const observer = new ResizeObserver(() => {
+                requestAnimationFrame(layoutPolicyPanels);
+            });
+            observer.observe(policyRoot);
+            policyItems.forEach((item) => {
+                const panel = item.querySelector('.policy-panel');
+                if (panel) observer.observe(panel);
+            });
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key !== 'Escape') return;
+            policyItems.forEach((item) => {
+                item.open = false;
+            });
+            requestAnimationFrame(layoutPolicyPanels);
         });
     </script>
 </body>

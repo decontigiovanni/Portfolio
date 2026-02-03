@@ -20,7 +20,6 @@
             <p class="cart-empty">Your cart is empty. Add items to see them here.</p>
         </div>
         <div class="cart-actions">
-            <button class="btn btn-outline">View cart</button>
             <button class="btn btn-solid">Checkout</button>
         </div>
     </aside>
@@ -29,16 +28,20 @@
         <span class="line-header"></span>
         <h1 class="store-title">Store / All products</h1>
         <span class="line-header"></span>
+        <div class="store-header-marquee">
+            <div class="store-header-marquee-track">
+                <span>Pre orders are now available - Pre orders are now available - Pre orders are now available - Pre orders are now available - </span>
+                <span>Pre orders are now available - Pre orders are now available - Pre orders are now available - Pre orders are now available - </span>
+            </div>
+        </div>
     </header>
 
-    <div class="line-full"></div>
-    <div class="line-full"></div>
-
-    <main class="store-main">
+    <main class="store-main store-main--catalog">
         <section class="store-grid">
             <a class="grid-cell product-card" href="product-s.html">
-                <div class="product-image">
-                    <img src="Immagini/01.png" alt="LA SACCA - S">
+                <div class="product-image product-image--swap">
+                    <img class="product-img-base" src="freitag placeholder/freitag_1_placeholder.jpg" alt="Freitag placeholder product 1" loading="lazy">
+                    <img class="product-img-hover" src="freitag placeholder/freitag_1_placeholder_hover.jpg" alt="" aria-hidden="true" loading="lazy">
                 </div>
                 <div class="product-meta">
                     <span>LA SACCA - S</span>
@@ -47,8 +50,9 @@
             </a>
 
             <a class="grid-cell product-card" href="product-m.html">
-                <div class="product-image">
-                    <img src="Immagini/02.png" alt="LA SACCA - M">
+                <div class="product-image product-image--swap">
+                    <img class="product-img-base" src="freitag placeholder/freitag_2_placeholder.jpg" alt="Freitag placeholder product 2" loading="lazy">
+                    <img class="product-img-hover" src="freitag placeholder/freitag_2_placeholder_hover.jpg" alt="" aria-hidden="true" loading="lazy">
                 </div>
                 <div class="product-meta">
                     <span>LA SACCA - M</span>
@@ -66,12 +70,27 @@
     <div class="line-full"></div>
 
     <footer class="page-footer">
-        <div class="footer-links">
-            <a href="https://www.instagram.com/" target="_blank" class="hover-link">Instagram</a>
-            <a href="https://www.youtube.com/" target="_blank" class="hover-link">YouTube</a>
-            <a href="mailto:info@example.com" class="hover-link">Contact</a>
-            <a href="shipping.html" class="hover-link">Shipping policy</a>
-            <a href="refund.html" class="hover-link">Refund policy</a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <p class="footer-kicker">Giovanni De Conti Lab</p>
+                <p>Independent upcycled bags and visual experiments, handcrafted in limited runs.</p>
+            </div>
+            <div class="footer-block">
+                <p class="footer-heading">Social</p>
+                <a href="https://www.instagram.com/" target="_blank" class="footer-link">Instagram</a>
+                <a href="https://www.youtube.com/" target="_blank" class="footer-link">YouTube</a>
+                <a href="mailto:info@example.com" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-block">
+                <p class="footer-heading">Support</p>
+                <a href="shipping.html" class="footer-link">Shipping policy</a>
+                <a href="refund.html" class="footer-link">Refund policy</a>
+                <a href="index.html" class="footer-link">Home</a>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <span>&copy; 2026 Giovanni De Conti</span>
+            <span>Made in Italy - Independent project</span>
         </div>
     </footer>
 
@@ -83,32 +102,35 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/cart.js"></script>
 
     <script>
-        const myTitles = new SplitType("header h1", {
-            types: "chars"
-        });
+        function animateMarquee(selector, direction) {
+            const track = document.querySelector(selector);
+            if (!track) return;
+            const firstSpan = track.querySelector("span");
+            if (!firstSpan) return;
 
-        gsap.from(".char", {
-            y: 80,
-            opacity: 0,
-            stagger: 0.01,
-            duration: 0.6,
-            ease: "power3.out"
-        });
-    </script>
+            const spanWidth = firstSpan.offsetWidth;
+            if (direction === "right") {
+                gsap.fromTo(track, { x: -spanWidth }, {
+                    x: 0,
+                    duration: 15,
+                    ease: "linear",
+                    repeat: -1
+                });
+            } else {
+                gsap.fromTo(track, { x: 0 }, {
+                    x: -spanWidth,
+                    duration: 15,
+                    ease: "linear",
+                    repeat: -1
+                });
+            }
+        }
 
-    <script>
-        const marquee = document.querySelector(".marquee");
-        const spanWidth = marquee.querySelector("span").offsetWidth;
-
-        gsap.to(marquee, {
-            x: -spanWidth,
-            duration: 15,
-            ease: "linear",
-            repeat: -1
-        });
+        animateMarquee(".footer-bar .marquee", "left");
+        animateMarquee(".store-header-marquee-track", "right");
     </script>
     <script>
         const cartToggle = document.querySelector('.cart-toggle');
