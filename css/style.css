@@ -1,12 +1,23 @@
-/* Reset di base */
+/* ========================================================================== */
+
+
+/*  GLOBAL RESET + FONT IMPORT                                                 */
+
+
+/* ========================================================================== */
+
+
+/* Import custom font */
 
 @font-face {
     font-family: "PPNeue";
-    /* Nome che userai nel CSS */
     src: url("../fonts/PPNeueMontreal-Book.otf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
+
+
+/* Base reset */
 
 * {
     margin: 0;
@@ -15,7 +26,13 @@
 }
 
 
-/* Font e colori */
+/* ========================================================================== */
+
+
+/*  GLOBAL TYPOGRAPHY & BASE STYLES                                           */
+
+
+/* ========================================================================== */
 
 body {
     font-family: "PPNeue";
@@ -23,19 +40,21 @@ body {
     background-color: #000000;
     line-height: 1.2;
     width: 200vh;
+    /* Manteniamo il valore originale su richiesta */
     height: 100vh;
     padding: 10px;
 }
 
 
-/* per rendere il testo evidenziato personalizzato*/
+/* Custom text selection */
 
 ::selection {
     background-color: #01FF8B;
-    /* colore dello sfondo della selezione */
     color: #000000;
-    /* colore del testo selezionato */
 }
+
+
+/* Header styles */
 
 header {
     text-align: left;
@@ -45,8 +64,31 @@ header {
 h1 {
     font-size: 3.5rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    /* line-height: 3.9rem; */
 }
+
+
+/* Global anchor style */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* GSAP split-type baseline character style */
+
+.char {
+    display: inline-block;
+}
+
+
+/* ========================================================================== */
+
+
+/*  FOOTER BAR + MARQUEE (GLOBAL)                                             */
+
+
+/* ========================================================================== */
 
 .footer-bar {
     position: fixed;
@@ -66,24 +108,36 @@ h1 {
 }
 
 .marquee span {
-    font-family: "PPNeue", sans-serif;
     font-size: 1.2rem;
     color: #000;
     padding-right: 2px;
 }
 
-.hover-link {
+
+/* ========================================================================== */
+
+
+/*  LINK HOVER EFFECTS (GLOBAL)                                                */
+
+
+/* ========================================================================== */
+
+
+/* → Hover link */
+
+.hover-link,
+.hover-link2 {
     display: inline-block;
-    /* importante per lavorare con padding */
     width: 100%;
-    /* forza l'andare a capo */
     position: relative;
     padding-left: 0;
-    /* di base nessun padding */
     color: #ffffff;
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
+
+/* Arrow for .hover-link (→) */
 
 .hover-link::before {
     content: "→";
@@ -92,33 +146,11 @@ h1 {
     opacity: 0;
     transition: all 0.3s ease;
     color: #01FF8B;
-    /* stessa tinta della scritta in hover */
+    font-family: "PPNeue";
 }
 
-.hover-link:hover {
-    color: #01FF8B;
-    /* cambia colore testo */
-    padding-left: 3rem;
-    /* spazio per la freccia */
-}
 
-.hover-link:hover::before {
-    opacity: 1;
-    /* la freccia diventa visibile */
-}
-
-.hover-link2 {
-    display: inline-block;
-    /* importante per lavorare con padding */
-    width: 100%;
-    /* forza l'andare a capo */
-    position: relative;
-    padding-left: 0;
-    /* di base nessun padding */
-    color: #ffffff;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+/* Arrow for .hover-link2 (←) */
 
 .hover-link2::before {
     content: "←";
@@ -127,59 +159,39 @@ h1 {
     opacity: 0;
     transition: all 0.3s ease;
     color: #01FF8B;
-    /* stessa tinta della scritta in hover */
+    font-family: "PPNeue";
 }
 
+
+/* Hover animations */
+
+.hover-link:hover,
 .hover-link2:hover {
     color: #01FF8B;
-    /* cambia colore testo */
     padding-left: 3rem;
-    /* spazio per la freccia */
 }
 
+.hover-link:hover::before,
 .hover-link2:hover::before {
     opacity: 1;
-    /* la freccia diventa visibile */
 }
+
+
+/* ========================================================================== */
+
+
+/*  PHOTO STACK                                                               */
+
+
+/* ========================================================================== */
 
 .photo-stack {
     position: fixed;
     bottom: 390px;
     right: 350px;
     width: 400px;
-    /* quarto dello schermo, regola come vuoi */
     height: 270px;
     pointer-events: auto;
-}
-
-.photo-stack img {
-    position: absolute;
-    width: 160%;
-    height: auto;
-    opacity: 0;
-    border-radius: 0px;
-    pointer-events: auto;
-}
-
-.photo-stack img.vertical {
-    position: absolute;
-    right: -150px;
-    max-height: 200%;
-    width: auto;
-}
-
-a {
-    text-decoration: none;
-    /* rimuove la sottolineatura */
-    color: inherit;
-    /* eredita il colore dal genitore (es. h1) */
-}
-
-.char {
-    display: inline-block;
-}
-
-.photo-stack {
     opacity: 0;
     transition: opacity 0.8s ease-out;
 }
@@ -188,29 +200,666 @@ a {
     opacity: 1;
 }
 
+.photo-stack img {
+    position: absolute;
+    width: 160%;
+    height: auto;
+    opacity: 0;
+    border-radius: 0;
+    pointer-events: auto;
+}
 
-/* ------------------------------ */
+.photo-stack img.vertical {
+    right: -150px;
+    max-height: 200%;
+    width: auto;
+}
 
 
-/* MEDIA QUERIES RESPONSIVE CSS   */
+/* ========================================================================== */
 
 
-/* ------------------------------ */
+/*  STORE PAGE WRAPPER                                                        */
 
 
-/* Tablet e schermi medi */
+/* ========================================================================== */
+
+body.store-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================================================== */
+
+
+/*  SECTION HEADERS & LINES                                                   */
+
+
+/* ========================================================================== */
+
+.section-shell {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Double underline effect for section titles */
+
+.section-head {
+    position: relative;
+    padding: 0 24px 12px 24px;
+}
+
+.section-head::before,
+.section-head::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.section-head::before {
+    bottom: -6px;
+}
+
+.section-head::after {
+    bottom: -12px;
+}
+
+
+/* Store header lines */
+
+.store-header {
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.store-title {
+    margin-top: 10px;
+    font-size: 3.2rem;
+    line-height: 1.1;
+}
+
+
+/* ========================================================================== */
+
+
+/*  STORE MAIN GRID                                                           */
+
+
+/* ========================================================================== */
+
+.store-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+    margin-top: 5px;
+}
+
+
+/* 3-column product grid */
+
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    grid-auto-rows: minmax(260px, 1fr);
+    gap: 0;
+    width: calc(100% + 48px);
+    margin: 0 -24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+
+/* Individual grid cell */
+
+.grid-cell {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.9);
+    background: #0a0a0a;
+}
+
+.grid-cell:not(:nth-child(3n)) {
+    border-right: 0.5px solid rgba(255, 255, 255, 0.9);
+}
+
+
+/* ========================================================================== */
+
+
+/*  PRODUCT CARD STYLES                                                       */
+
+
+/* ========================================================================== */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px;
+    color: inherit;
+    aspect-ratio: 1 / 1;
+}
+
+.product-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2b2b2b;
+    padding: 12px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.35));
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.product-price {
+    color: #ffffff;
+}
+
+
+/* ========================================================================== */
+
+
+/*  STORE LINKS                                                               */
+
+
+/* ========================================================================== */
+
+.store-links {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-self: end;
+    text-align: right;
+}
+
+.store-links__primary,
+.store-links__secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.store-links__primary a {
+    font-size: 1.4rem;
+}
+
+.store-links__secondary a {
+    font-size: 1.05rem;
+}
+
+.store-links a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.store-links a:hover {
+    color: #01FF8B;
+}
+
+
+/* ========================================================================== */
+
+
+/*  POLICY PAGE LAYOUT                                                        */
+
+
+/* ========================================================================== */
+
+.policy-main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.policy-content {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.policy-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+}
+
+.policy-content h3 {
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+.policy-content p,
+.policy-content ul {
+    font-size: 0.98rem;
+}
+
+.policy-content ul {
+    margin-left: 16px;
+    display: grid;
+    gap: 4px;
+}
+
+.policy-path {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+
+/* ========================================================================== */
+
+
+/*  PRODUCT PAGE DETAILS                                                      */
+
+
+/* ========================================================================== */
+
+.product-page {
+    padding: 24px;
+}
+
+.product-body {
+    position: relative;
+    margin-top: 25px;
+}
+
+.product-body .split-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: #ffffff;
+    transform: translateX(-0.5px);
+}
+
+.product-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+    margin-top: 0;
+}
+
+.product-gallery {
+    display: grid;
+    gap: 18px;
+}
+
+.gallery-frame {
+    background: transparent;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-frame img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: none;
+    padding: 0;
+    min-height: 100%;
+}
+
+.product-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-header h2 {
+    font-size: 1.6rem;
+}
+
+.product-description {
+    font-size: 0.98rem;
+    line-height: 1.35;
+}
+
+.product-list ul {
+    margin-left: 16px;
+    display: grid;
+    gap: 4px;
+    font-size: 0.95rem;
+}
+
+.product-actions {
+    display: grid;
+    gap: 10px;
+}
+
+
+/* Buttons */
+
+.btn {
+    padding: 12px;
+    border-radius: 999px;
+    font-family: "PPNeue";
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    border-color: #01FF8B;
+    color: #01FF8B;
+}
+
+.btn-solid {
+    background: #e0e0e0;
+    color: #000000;
+    border: 1px solid #e0e0e0;
+}
+
+.btn-solid:hover {
+    background: #01FF8B;
+    border-color: #01FF8B;
+}
+
+
+/* ========================================================================== */
+
+
+/*  CART PANEL & TOGGLE                                                       */
+
+
+/* ========================================================================== */
+
+.cart-toggle {
+    position: fixed;
+    top: 16px;
+    right: 24px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 3.2rem;
+    cursor: pointer;
+    z-index: 50;
+    transition: color 0.2s ease;
+}
+
+.cart-toggle.active {
+    color: #000000;
+}
+
+.cart-toggle span {
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: "PPNeue";
+}
+
+.cart-toggle span::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #01FF8B;
+    font-family: "PPNeue";
+}
+
+.cart-toggle:hover span {
+    color: #01FF8B;
+    padding-left: 2.5rem;
+}
+
+.cart-toggle:hover span::before {
+    opacity: 1;
+}
+
+.cart-toggle.active:hover span {
+    color: #ffffff;
+}
+
+.cart-toggle.active:hover span::before {
+    color: #ffffff;
+}
+
+
+/* Cart sliding panel */
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    width: 320px;
+    height: 100vh;
+    background: #01FF8B;
+    border-left: 1px solid #2b2b2b;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+    padding: 60px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: right 0.3s ease;
+    z-index: 40;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.cart-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    padding-top: 8px;
+}
+
+.cart-empty {
+    opacity: 0.9;
+    font-size: 0.95rem;
+    color: #000000;
+}
+
+.cart-actions {
+    display: grid;
+    gap: 8px;
+}
+
+
+/* Override button styles for cart */
+
+.cart-panel .btn-outline {
+    border-color: #000000;
+    color: #000000;
+}
+
+.cart-panel .btn-outline:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.cart-panel .btn-solid {
+    background: #000000;
+    color: #01FF8B;
+}
+
+
+/* ========================================================================== */
+
+
+/*  FOOTER SECTION                                                            */
+
+
+/* ========================================================================== */
+
+.page-footer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 140px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+}
+
+
+/* Divider lines used throughout the store */
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 16px 0;
+}
+
+
+/* Full-width divider beyond padding constraints */
+
+.line-full {
+    width: calc(100% + 48px);
+    margin: 0 -24px 0px -24px;
+    height: 1px;
+    background: #ffffff;
+}
+
+.line-header {
+    display: block;
+    width: calc(100% + 48px);
+    margin: 8px -24px 8px -24px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.line-header-gap {
+    display: block;
+    width: calc(100% + 48px);
+    margin: 25px -24px 0 -24px;
+    height: 1px;
+    background: #ffffff;
+}
+
+
+/* ========================================================================== */
+
+
+/*  RESPONSIVE MEDIA QUERIES                                                  */
+
+
+/* ========================================================================== */
+
+
+/* ========================================================================== */
+
+
+/*  TABLET (≤ 1024px)                                                         */
+
+
+/* ========================================================================== */
 
 @media (max-width: 1024px) {
     body {
         width: 100%;
-        /* niente larghezza fissa */
         height: auto;
+        padding: 20px;
+    }
+    body.store-page {
         padding: 20px;
     }
     h1 {
         font-size: 2.5rem;
-        /* più piccolo */
         line-height: 1.3;
+    }
+    .store-title {
+        font-size: 2.6rem;
+    }
+    .store-main {
+        gap: 32px;
+    }
+    .policy-main {
+        gap: 28px;
+        margin-top: 5px;
+    }
+    /* 2-column grid */
+    .store-grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+    }
+    .grid-cell:not(:nth-child(2n)) {
+        border-right: 0.5px solid rgba(255, 255, 255, 0.9);
+    }
+    .line-full {
+        width: calc(100% + 40px);
+        margin: 0 -20px 0px -20px;
+    }
+    .line-header {
+        width: calc(100% + 40px);
+        margin: 8px -20px 8px -20px;
+    }
+    .line-header-gap {
+        width: calc(100% + 40px);
+        margin: 8px -20px 0 -20px;
+    }
+    .product-main {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0;
+    }
+    .page-footer {
+        justify-content: flex-start;
+    }
+    .footer-links {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .cart-toggle {
+        font-size: 2.6rem;
+    }
+    .divider {
+        margin: 14px 0;
     }
     .photo-stack {
         bottom: 150px;
@@ -221,87 +870,82 @@ a {
     .photo-stack img {
         width: 120%;
     }
-    .hover-link {
-        display: inline-block;
-        /* importante per lavorare con padding */
-        width: 100%;
-        /* forza l'andare a capo */
-        position: relative;
-        padding-left: 0;
-        /* di base nessun padding */
-        color: #ffffff;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-    .hover-link::before {
-        content: "→";
-        position: absolute;
-        left: 0;
-        opacity: 0;
-        transition: all 0.3s ease;
-        color: #01FF8B;
-        /* stessa tinta della scritta in hover */
-    }
-    .hover-link:hover {
-        color: #01FF8B;
-        /* cambia colore testo */
-        padding-left: 2.5rem;
-        /* spazio per la freccia */
-    }
-    .hover-link:hover::before {
-        opacity: 1;
-        /* la freccia diventa visibile */
-    }
-    .hover-link2 {
-        display: inline-block;
-        /* importante per lavorare con padding */
-        width: 100%;
-        /* forza l'andare a capo */
-        position: relative;
-        padding-left: 0;
-        /* di base nessun padding */
-        color: #ffffff;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-    .hover-link2::before {
-        content: "←";
-        position: absolute;
-        left: 0;
-        opacity: 0;
-        transition: all 0.3s ease;
-        color: #01FF8B;
-        /* stessa tinta della scritta in hover */
-    }
-    .hover-link2:hover {
-        color: #01FF8B;
-        /* cambia colore testo */
-        padding-left: 2.5rem;
-        /* spazio per la freccia */
-    }
-    .hover-link2:hover::before {
-        opacity: 1;
-        /* la freccia diventa visibile */
-    }
 }
 
 
-/* Smartphone */
+/* ========================================================================== */
+
+
+/*  SMARTPHONE (≤ 768px)                                                      */
+
+
+/* ========================================================================== */
 
 @media (max-width: 768px) {
     body {
         width: 100%;
         padding: 15px;
     }
+    body.store-page {
+        padding: 16px;
+    }
     header {
         margin-bottom: 20px;
-        text-align: left;
-        /* centrato su mobile */
     }
     h1 {
         font-size: 1.8rem;
-        line-height: 1.2;
         margin-bottom: 15px;
+    }
+    .store-title {
+        font-size: 2rem;
+    }
+    .store-main {
+        gap: 28px;
+        padding-bottom: 70px;
+        margin-top: 5px;
+    }
+    /* 1-column layout */
+    .store-grid {
+        grid-template-columns: 1fr;
+        width: calc(100% + 32px);
+        margin: 0 -16px;
+    }
+    .line-full {
+        width: calc(100% + 32px);
+        margin: 0 -16px 0px -16px;
+    }
+    .line-header {
+        width: calc(100% + 32px);
+        margin: 8px -16px 8px -16px;
+    }
+    .line-header-gap {
+        width: calc(100% + 32px);
+        margin: 8px -16px 0 -16px;
+    }
+    .policy-main {
+        gap: 24px;
+    }
+    .product-main {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+    .product-body .split-line {
+        display: none;
+    }
+    .product-card {
+        padding: 12px;
+    }
+    .store-links__primary a {
+        font-size: 1.2rem;
+    }
+    .store-links__secondary a {
+        font-size: 1rem;
+    }
+    .cart-toggle {
+        font-size: 2rem;
+    }
+    .divider {
+        margin: 12px 0;
     }
     .footer-bar {
         height: 40px;
@@ -309,9 +953,9 @@ a {
     .marquee span {
         font-size: 1rem;
     }
+    /* Make photo-stack scrollable instead of fixed */
     .photo-stack {
         position: relative;
-        /* non più fixed, segue lo scroll */
         bottom: auto;
         right: auto;
         width: 100%;
@@ -325,72 +969,16 @@ a {
         max-width: 100%;
         transform: none;
     }
-    .hover-link {
-        display: inline-block;
-        /* importante per lavorare con padding */
-        width: 100%;
-        /* forza l'andare a capo */
-        position: relative;
-        padding-left: 0;
-        /* di base nessun padding */
-        color: #ffffff;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-    .hover-link::before {
-        content: "→";
-        position: absolute;
-        left: 0;
-        opacity: 0;
-        transition: all 0.3s ease;
-        color: #01FF8B;
-        /* stessa tinta della scritta in hover */
-    }
-    .hover-link:hover {
-        color: #01FF8B;
-        /* cambia colore testo */
-        padding-left: 2rem;
-        /* spazio per la freccia */
-    }
-    .hover-link:hover::before {
-        opacity: 1;
-        /* la freccia diventa visibile */
-    }
-    .hover-link2 {
-        display: inline-block;
-        /* importante per lavorare con padding */
-        width: 100%;
-        /* forza l'andare a capo */
-        position: relative;
-        padding-left: 0;
-        /* di base nessun padding */
-        color: #ffffff;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-    .hover-link2::before {
-        content: "←";
-        position: absolute;
-        left: 0;
-        opacity: 0;
-        transition: all 0.3s ease;
-        color: #01FF8B;
-        /* stessa tinta della scritta in hover */
-    }
-    .hover-link2:hover {
-        color: #01FF8B;
-        /* cambia colore testo */
-        padding-left: 2rem;
-        /* spazio per la freccia */
-    }
-    .hover-link2:hover::before {
-        opacity: 1;
-        /* la freccia diventa visibile */
-    }
 }
 
 
-/* Extra piccolo (es. <480px) */
+/* ========================================================================== */
+
+
+/*  VERY SMALL DEVICES (≤ 480px)                                              */
+
+
+/* ========================================================================== */
 
 @media (max-width: 480px) {
     h1 {
