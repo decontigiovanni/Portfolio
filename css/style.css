@@ -6,6 +6,11 @@
 
 /* ========================================================================== */
 
+:root {
+    --color-primary: #01FF8B;
+    --color-text: #ffffff;
+    --color-bg: #000000;
+}
 
 /* Import custom font */
 
@@ -36,8 +41,8 @@
 
 body {
     font-family: "PPNeue";
-    color: #ffffff;
-    background-color: #000000;
+    color: var(--color-text);
+    background-color: var(--color-bg);
     line-height: 1.2;
     width: 200vh;
     /* Manteniamo il valore originale su richiesta */
@@ -62,8 +67,8 @@ body::-webkit-scrollbar {
 /* Custom text selection */
 
 ::selection {
-    background-color: #01FF8B;
-    color: #000000;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
 }
 
 
@@ -121,7 +126,7 @@ a {
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-color: #01FF8B;
+    background-color: var(--color-primary);
 }
 
 .marquee {
@@ -131,7 +136,7 @@ a {
 
 .marquee span {
     font-size: 1.2rem;
-    color: #000;
+    color: var(--color-bg);
     padding-right: 2px;
 }
 
@@ -142,7 +147,7 @@ a {
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-color: #000000;
+    background-color: var(--color-bg);
     border-top: 1px solid rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
@@ -154,7 +159,7 @@ a {
 
 .store-header-marquee-track span {
     font-size: 1.2rem;
-    color: #01FF8B;
+    color: var(--color-primary);
     padding-right: 2px;
 }
 
@@ -176,7 +181,7 @@ a {
     width: 100%;
     position: relative;
     padding-left: 0;
-    color: #ffffff;
+    color: var(--color-text);
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -190,7 +195,7 @@ a {
     left: 0;
     opacity: 0;
     transition: all 0.3s ease;
-    color: #01FF8B;
+    color: var(--color-primary);
     font-family: "PPNeue";
 }
 
@@ -203,7 +208,7 @@ a {
     left: 0;
     opacity: 0;
     transition: all 0.3s ease;
-    color: #01FF8B;
+    color: var(--color-primary);
     font-family: "PPNeue";
 }
 
@@ -212,7 +217,7 @@ a {
 
 .hover-link:hover,
 .hover-link2:hover {
-    color: #01FF8B;
+    color: var(--color-primary);
     padding-left: 3rem;
 }
 
@@ -494,25 +499,25 @@ body.store-page {
 
 .checkout-method-option span::after {
     content: "+";
-    color: #01FF8B;
+    color: var(--color-primary);
     font-size: 1.1rem;
     line-height: 1;
 }
 
 .checkout-method-option input:checked+span {
-    background: #01FF8B;
-    color: #000000;
-    border-color: #01FF8B;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-color: var(--color-primary);
 }
 
 .checkout-method-option input:checked+span::after {
     content: "+";
-    color: #000000;
+    color: var(--color-bg);
 }
 
 .checkout-method-option:hover span,
 .checkout-method-option:focus-within span {
-    border-color: #01FF8B;
+    border-color: var(--color-primary);
 }
 
 .checkout-pickup-note {
@@ -537,17 +542,17 @@ body.store-page {
 }
 
 .checkout-form input {
-    background: #000000;
+    background: var(--color-bg);
     border: 1px solid rgba(255, 255, 255, 0.7);
-    color: #ffffff;
+    color: var(--color-text);
     padding: 10px 12px;
     font-family: "PPNeue";
     font-size: 1.1rem;
 }
 
 .checkout-form input:focus {
-    outline: 1px solid #01FF8B;
-    border-color: #01FF8B;
+    outline: 1px solid var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .checkout-row {
@@ -564,16 +569,16 @@ body.store-page {
     margin-top: 4px;
     border-radius: 0;
     font-size: 1.1rem;
-    background: #000000;
-    color: #ffffff;
+    background: var(--color-bg);
+    color: var(--color-text);
     border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .checkout-submit:hover,
 .checkout-submit:focus-visible {
-    background: #01FF8B;
-    color: #000000;
-    border-color: #01FF8B;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-color: var(--color-primary);
 }
 
 .checkout-submit:disabled {
@@ -586,9 +591,14 @@ body.store-page {
     opacity: 0.82;
 }
 
+.checkout-legal-links a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 .checkout-status {
     font-size: 1.1rem;
-    color: #01FF8B;
+    color: var(--color-primary);
     min-height: 1.2em;
 }
 
@@ -754,16 +764,16 @@ body.store-page {
 
 .product-card:hover .product-meta,
 .product-card:focus-visible .product-meta {
-    color: #01FF8B;
+    color: var(--color-primary);
 }
 
 .product-card:hover .product-price,
 .product-card:focus-visible .product-price {
-    color: #01FF8B;
+    color: var(--color-primary);
 }
 
 .product-card:focus-visible {
-    outline: 1px solid #01FF8B;
+    outline: 1px solid var(--color-primary);
     outline-offset: -1px;
 }
 
@@ -826,12 +836,12 @@ body.store-page {
 }
 
 .store-links a {
-    color: #ffffff;
+    color: var(--color-text);
     transition: color 0.3s ease;
 }
 
 .store-links a:hover {
-    color: #01FF8B;
+    color: var(--color-primary);
 }
 
 
@@ -1025,14 +1035,14 @@ body.store-page {
 }
 
 .product-readmore[open] summary {
-    background: #01FF8B;
-    color: #000000;
-    border-color: #01FF8B;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-color: var(--color-primary);
 }
 
 .product-readmore summary:hover,
 .product-readmore summary:focus-visible {
-    background: #01FF8B;
+    background: var(--color-primary);
     color: #000000;
     border-color: #01FF8B;
 }
@@ -1265,6 +1275,40 @@ body.store-page {
 
 /* ========================================================================== */
 
+@keyframes cart-toggle-wobble {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    20% {
+        transform: translateY(-1px) rotate(-1.6deg);
+    }
+    45% {
+        transform: translateY(1px) rotate(1.2deg);
+    }
+    70% {
+        transform: translateY(-0.5px) rotate(-0.9deg);
+    }
+}
+
+@keyframes cart-toggle-appear {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(-12px) scale(0.92);
+    }
+    70% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0) scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0) scale(1);
+    }
+}
+
 .cart-toggle {
     position: fixed;
     top: calc(var(--layout-gutter, 24px) + 1px);
@@ -1279,10 +1323,19 @@ body.store-page {
     padding: 0;
     line-height: 1.1;
     transition: color 0.2s ease;
+    opacity: 0;
+    transform-origin: top right;
+    animation: cart-toggle-appear 0.85s cubic-bezier(0.22, 0.8, 0.2, 1) 0.2s both;
+    will-change: transform, opacity, filter;
 }
 
 .cart-toggle.active {
     color: #ffffff;
+}
+
+.cart-toggle.active span {
+    animation-play-state: paused;
+    transform: translateY(0) rotate(0deg);
 }
 
 .cart-toggle span {
@@ -1290,8 +1343,13 @@ body.store-page {
     position: relative;
     transition: all 0.3s ease;
     font-family: "PPNeue";
-    color: #ffffff;
-    mix-blend-mode: difference;
+    color: #000000;
+    background: #01FF8B;
+    border: 1px solid #01FF8B;
+    border-radius: 0;
+    padding: 0.18em 0.95em;
+    animation: cart-toggle-wobble 1.9s ease-in-out infinite;
+    will-change: transform;
 }
 
 .cart-toggle span::before {
@@ -1301,16 +1359,44 @@ body.store-page {
     opacity: 0;
     transition: all 0.3s ease;
     color: currentColor;
-    mix-blend-mode: difference;
     font-family: "PPNeue";
 }
 
-.cart-toggle:hover span {
-    padding-left: 2.5rem;
+.cart-toggle span::after {
+    content: "←";
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: currentColor;
+    font-family: "PPNeue";
 }
 
-.cart-toggle:hover span::before {
+.cart-toggle:hover span,
+.cart-toggle:focus-visible span {
+    animation-play-state: paused;
+    transform: translateY(0) rotate(0deg);
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.cart-toggle:hover span::before,
+.cart-toggle:focus-visible span::before {
     opacity: 1;
+}
+
+.cart-toggle:hover span::after,
+.cart-toggle:focus-visible span::after {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cart-toggle {
+        animation: none;
+        opacity: 1;
+        filter: none;
+        transform: none;
+    }
 }
 
 

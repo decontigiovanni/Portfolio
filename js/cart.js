@@ -1,6 +1,4 @@
 (() => {
-    const STORAGE_KEY = "gdc_cart_v1";
-
     const cartPanel = document.getElementById("cartPanel");
     const cartToggle = document.querySelector(".cart-toggle");
     const cartItemsEl = cartPanel ? cartPanel.querySelector(".cart-items") : null;
@@ -11,30 +9,7 @@
         return;
     }
 
-    function parsePrice(rawValue) {
-        if (!rawValue) return 0;
-        const normalized = String(rawValue).replace(",", ".").replace(/[^0-9.]/g, "");
-        const value = Number.parseFloat(normalized);
-        return Number.isFinite(value) ? value : 0;
-    }
-
-    function formatPrice(value) {
-        return Number.isInteger(value) ? `${value}€` : `${value.toFixed(2).replace(".", ",")}€`;
-    }
-
-    function loadCart() {
-        try {
-            const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-            if (!Array.isArray(parsed)) return [];
-            return parsed.filter((item) => item && item.id && item.name);
-        } catch (_error) {
-            return [];
-        }
-    }
-
-    function saveCart(cart) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
-    }
+    const { parsePrice, formatPrice, loadCart, saveCart } = CartUtils;
 
     function setCheckoutState(cart) {
         if (!checkoutBtn) return;
@@ -130,7 +105,7 @@
 
         const totalRow = document.createElement("div");
         totalRow.className = "cart-total";
-        const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        const total = CartUtils.getTotal(cart);
         totalRow.innerHTML = `<span>Total</span><strong>${formatPrice(total)}</strong>`;
         fragment.appendChild(totalRow);
 

@@ -1,5 +1,4 @@
 (() => {
-    const STORAGE_KEY = "gdc_cart_v1";
     const SHOP_EMAIL = "info@example.com";
     const PICKUP_ADDRESS = "Via da definire, Italy";
     const itemsEl = document.getElementById("checkoutItems");
@@ -13,19 +12,7 @@
 
     if (!itemsEl || !totalEl) return;
 
-    function loadCart() {
-        try {
-            const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-            if (!Array.isArray(parsed)) return [];
-            return parsed.filter((item) => item && item.id && item.name);
-        } catch (_error) {
-            return [];
-        }
-    }
-
-    function formatPrice(value) {
-        return Number.isInteger(value) ? `${value}€` : `${value.toFixed(2).replace(".", ",")}€`;
-    }
+    const { formatPrice, loadCart } = CartUtils;
 
     function getDeliveryMethod() {
         const selected = deliveryInputs.find((input) => input.checked);
@@ -94,10 +81,8 @@
         }
 
         const fragment = document.createDocumentFragment();
-        let total = 0;
 
         cart.forEach((item) => {
-            total += item.price * item.quantity;
             const row = document.createElement("div");
             row.className = "checkout-item";
             row.innerHTML = `<span>${item.name} x ${item.quantity}</span><strong>${formatPrice(item.price * item.quantity)}</strong>`;
@@ -105,7 +90,7 @@
         });
 
         itemsEl.appendChild(fragment);
-        totalEl.textContent = formatPrice(total);
+        totalEl.textContent = formatPrice(CartUtils.getTotal(cart));
         if (submitBtn) submitBtn.disabled = false;
     }
 
@@ -129,10 +114,9 @@
             const city = String(formData.get("city") || "").trim();
             const zip = String(formData.get("zip") || "").trim();
             const addressLine = [address, zip, city].filter(Boolean).join(", ");
-            const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            const total = CartUtils.getTotal(cart);
 
-            localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
-            window.dispatchEvent(new Event("cart:updated"));
+            CartUtils.clearCart();
             renderCheckout();
 
             if (statusEl) {
