@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Store - Coming Soon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Local styles to align coming-soon layout with site */
+        
+        .coming-soon-wrap {
+            max-width: 920px;
+            margin: 48px auto;
+            padding: 36px 28px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        /* Unify sizes and class: use PPNeue for all coming-soon text */
+        
+        .coming-soon-text {
+            font-family: "PPNeue", sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin: 0;
+            letter-spacing: 0.01em;
+            opacity: 0.92;
+        }
+        
+        .coming-soon-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+        
+        .coming-soon-actions .btn {
+            min-width: 160px;
+            padding: 10px 16px;
+        }
+        
+        .coming-soon-note {
+            margin-top: 6px;
+            opacity: 0.82;
+        }
+        
+        .email-link {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .coming-soon-wrap {
+                margin: 28px 16px;
+                padding: 22px;
+                gap: 12px;
+            }
+            .coming-soon-text {
+                font-size: 0.9rem;
+            }
+            .coming-soon-actions .btn {
+                min-width: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body class="store-coming-soon">
+    <header class="store-header">
+        <h1 class="hover-link2"><a href="index.html">Home</a></h1>
+        <span class="line-header"></span>
+        <h1 class="store-title">Store — Coming Soon</h1>
+        <span class="line-header"></span>
+    </header>
+
+    <main>
+        <div class="coming-soon-wrap">
+            <h3 class="coming-soon-text">Il negozio è in costruzione</h3>
+            <p class="lead coming-soon-text">Stiamo costruendo qualcosa di speciale. Lo shop non è ancora pronto — apriremo a breve.</p>
+
+            <div class="coming-soon-actions" role="group" aria-label="Store actions">
+                <!-- 'Torna alla Home' removed on purpose; header instructs to click Home top-left -->
+                <button class="contact-btn" aria-label="Scrivimi" onclick="location.href='mailto:decontigiovanni02@gmail.com'">
+                    <span>Scrivimi</span>
+                </button>
+            </div>
+
+            <p class="coming-soon-note coming-soon-text">Vuoi essere avvisato quando lo store sarà online?<br>Scrivi a <a class="email-link" href="mailto:decontigiovanni02@gmail.com">decontigiovanni02@gmail.com</a>.</p>
+        </div>
+    </main>
+
+    <footer class="page-footer" style="margin-top:32px;">
+        <div class="footer-legal" style="justify-content:center;gap:12px;"></div>
+    </footer>
+
+    <div class="footer-bar">
+        <div class="store-header-marquee" style="width:100%; margin:0;">
+            <div class="store-header-marquee-track">
+                <span>Coming soon - Coming soon - Coming soon - Coming soon - </span>
+                <span>Coming soon - Coming soon - Coming soon - Coming soon - </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        try {
+            const myTitles = new SplitType("header h1", {
+                types: "chars"
+            });
+            gsap.from(".char", {
+                y: 100,
+                opacity: 0,
+                stagger: 0.01,
+                duration: 0.6,
+                ease: "power3.out"
+            });
+        } catch (e) {
+            // fail gracefully if SplitType not available
+            console.warn('SplitType init failed', e);
+        }
+    </script>
+    <script>
+        function animateMarquee(selector, direction) {
+            const tracks = document.querySelectorAll(selector);
+            if (!tracks || tracks.length === 0) return;
+            tracks.forEach(track => {
+                const firstSpan = track.querySelector("span");
+                if (!firstSpan) return;
+                const spanWidth = firstSpan.offsetWidth;
+                if (direction === "right") {
+                    gsap.fromTo(track, {
+                        x: -spanWidth
+                    }, {
+                        x: 0,
+                        duration: 15,
+                        ease: "linear",
+                        repeat: -1
+                    });
+                } else {
+                    gsap.fromTo(track, {
+                        x: 0
+                    }, {
+                        x: -spanWidth,
+                        duration: 15,
+                        ease: "linear",
+                        repeat: -1
+                    });
+                }
+            });
+        }
+
+        animateMarquee(".footer-bar .store-header-marquee-track", "left");
+    </script>
+
+    <script>
+        /* Gentle fade-in for the Coming Soon content */
+        try {
+            gsap.from(".coming-soon-wrap > *", {
+                y: 12,
+                opacity: 0,
+                duration: 0.6,
+                stagger: 0.08,
+                ease: "power3.out",
+                delay: 0.25
+            });
+        } catch (e) {
+            console.warn('GSAP fade-in (coming-soon) failed', e);
+        }
+    </script>
+
+</body>
+
+</html>

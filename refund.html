@@ -24,7 +24,7 @@
         </div>
     </aside>
     <header class="store-header">
-        <h1 class="hover-link2"><a href="store.html">Store</a></h1>
+        <h1 class="hover-link2"><a href="store-coming-soon.html">Store</a></h1>
         <span class="line-header"></span>
         <h1 class="store-title">Refund policy</h1>
         <span class="line-header"></span>
@@ -90,12 +90,25 @@
     <script src="js/utils.js"></script>
     <script src="js/cart.js"></script>
     <script>
-        const myTitles = new SplitType("header h1", { types: "chars" });
-        gsap.from(".char", { y: 80, opacity: 0, stagger: 0.01, duration: 0.6, ease: "power3.out" });
+        const myTitles = new SplitType("header h1", {
+            types: "chars"
+        });
+        gsap.from(".char", {
+            y: 80,
+            opacity: 0,
+            stagger: 0.01,
+            duration: 0.6,
+            ease: "power3.out"
+        });
 
         const marquee = document.querySelector(".marquee");
         const spanWidth = marquee.querySelector("span").offsetWidth;
-        gsap.to(marquee, { x: -spanWidth, duration: 15, ease: "linear", repeat: -1 });
+        gsap.to(marquee, {
+            x: -spanWidth,
+            duration: 15,
+            ease: "linear",
+            repeat: -1
+        });
 
         const cartToggle = document.querySelector('.cart-toggle');
         const cartPanel = document.getElementById('cartPanel');
