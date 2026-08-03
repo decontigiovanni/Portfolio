@@ -1081,6 +1081,177 @@ body.store-page {
     opacity: 0.8;
 }
 
+
+/* ========================================================================== */
+
+
+/*  PROJECT GALLERY + LIGHTBOX (multi-image project panels)                   */
+
+
+/* ========================================================================== */
+
+.project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 8px;
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.project-gallery-thumb {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background: #f2f2f2;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.project-gallery-thumb picture,
+.project-gallery-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-gallery-thumb:hover,
+.project-gallery-thumb:focus-visible {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.project-gallery-thumb:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.project-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-lightbox[hidden] {
+    display: none;
+}
+
+.project-lightbox-inner {
+    position: relative;
+    width: min(90vw, 1400px);
+    max-height: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-lightbox-image {
+    max-width: 100%;
+    max-height: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-lightbox-image picture,
+.project-lightbox-image img {
+    max-width: 100%;
+    max-height: 86vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.project-lightbox-close,
+.project-lightbox-nav {
+    position: absolute;
+    border: 1px solid var(--color-primary);
+    background: #000000;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-family: "PPNeue";
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.project-lightbox-close:hover,
+.project-lightbox-close:focus-visible,
+.project-lightbox-nav:hover,
+.project-lightbox-nav:focus-visible {
+    background: var(--color-primary);
+    color: #000000;
+    outline: none;
+}
+
+.project-lightbox-close {
+    top: -44px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.project-lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+}
+
+.project-lightbox-prev {
+    left: -56px;
+}
+
+.project-lightbox-next {
+    right: -56px;
+}
+
+.project-lightbox-counter {
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+body.is-lightbox-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .project-lightbox-inner {
+        width: 94vw;
+    }
+
+    .project-lightbox-prev {
+        left: 4px;
+    }
+
+    .project-lightbox-next {
+        right: 4px;
+    }
+
+    .project-lightbox-close {
+        top: 4px;
+        right: 4px;
+    }
+
+    .project-lightbox-counter {
+        bottom: 4px;
+    }
+}
+
 .project-close {
     border: none;
     background: transparent;
