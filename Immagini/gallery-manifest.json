@@ -1,0 +1,2368 @@
+{
+  "brandmr": [
+    {
+      "base": "01-cover",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "01-cover-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 2329
+        },
+        {
+          "file": "01-cover-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 3248
+        },
+        {
+          "file": "01-cover-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 4839
+        },
+        {
+          "file": "01-cover-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 8078
+        },
+        {
+          "file": "01-cover-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 7187
+        },
+        {
+          "file": "01-cover-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 13650
+        },
+        {
+          "file": "01-cover-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 9160
+        },
+        {
+          "file": "01-cover-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 19104
+        },
+        {
+          "file": "01-cover-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 32784
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "02-brief-mission",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "02-brief-mission-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 4633
+        },
+        {
+          "file": "02-brief-mission-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 5822
+        },
+        {
+          "file": "02-brief-mission-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 11083
+        },
+        {
+          "file": "02-brief-mission-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 15402
+        },
+        {
+          "file": "02-brief-mission-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 17265
+        },
+        {
+          "file": "02-brief-mission-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 25882
+        },
+        {
+          "file": "02-brief-mission-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 22172
+        },
+        {
+          "file": "02-brief-mission-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 36090
+        },
+        {
+          "file": "02-brief-mission-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 54917
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "03-metodo-4-fasi-sistemiche",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "03-metodo-4-fasi-sistemiche-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 5615
+        },
+        {
+          "file": "03-metodo-4-fasi-sistemiche-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 7038
+        },
+        {
+          "file": "03-metodo-4-fasi-sistemiche-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 13012
+        },
+        {
+          "file": "03-metodo-4-fasi-sistemiche-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 18420
+        },
+        {
+          "file": "03-metodo-4-fasi-sistemiche-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 19887
+        },
+        {
+          "file": "03-metodo-4-fasi-sistemiche-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 29498
+        },
+        {
+          "file": "03-metodo-4-fasi-sistemiche-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 26197
+        },
+        {
+          "file": "03-metodo-4-fasi-sistemiche-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 41098
+        },
+        {
+          "file": "03-metodo-4-fasi-sistemiche-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 52307
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "04-stakeholder-matrix",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "04-stakeholder-matrix-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 2385
+        },
+        {
+          "file": "04-stakeholder-matrix-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 3190
+        },
+        {
+          "file": "04-stakeholder-matrix-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 6084
+        },
+        {
+          "file": "04-stakeholder-matrix-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 9084
+        },
+        {
+          "file": "04-stakeholder-matrix-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 9496
+        },
+        {
+          "file": "04-stakeholder-matrix-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 15526
+        },
+        {
+          "file": "04-stakeholder-matrix-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 12688
+        },
+        {
+          "file": "04-stakeholder-matrix-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 21824
+        },
+        {
+          "file": "04-stakeholder-matrix-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 37748
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "05-vision",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "05-vision-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 3312
+        },
+        {
+          "file": "05-vision-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 4246
+        },
+        {
+          "file": "05-vision-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 8597
+        },
+        {
+          "file": "05-vision-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 12394
+        },
+        {
+          "file": "05-vision-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 13863
+        },
+        {
+          "file": "05-vision-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 20850
+        },
+        {
+          "file": "05-vision-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 17763
+        },
+        {
+          "file": "05-vision-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 29530
+        },
+        {
+          "file": "05-vision-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 38640
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "06-issue-tree",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "06-issue-tree-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 2359
+        },
+        {
+          "file": "06-issue-tree-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 3610
+        },
+        {
+          "file": "06-issue-tree-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 6381
+        },
+        {
+          "file": "06-issue-tree-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 10046
+        },
+        {
+          "file": "06-issue-tree-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 9596
+        },
+        {
+          "file": "06-issue-tree-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 17162
+        },
+        {
+          "file": "06-issue-tree-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 12888
+        },
+        {
+          "file": "06-issue-tree-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 24936
+        },
+        {
+          "file": "06-issue-tree-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 41811
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "07-customer-journey-ora",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "07-customer-journey-ora-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 2043
+        },
+        {
+          "file": "07-customer-journey-ora-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 2772
+        },
+        {
+          "file": "07-customer-journey-ora-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 4545
+        },
+        {
+          "file": "07-customer-journey-ora-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 6914
+        },
+        {
+          "file": "07-customer-journey-ora-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 6690
+        },
+        {
+          "file": "07-customer-journey-ora-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 11530
+        },
+        {
+          "file": "07-customer-journey-ora-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 8678
+        },
+        {
+          "file": "07-customer-journey-ora-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 16330
+        },
+        {
+          "file": "07-customer-journey-ora-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 20640
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "08-customer-journey-one-stop-shop",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "08-customer-journey-one-stop-shop-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 3351
+        },
+        {
+          "file": "08-customer-journey-one-stop-shop-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 4766
+        },
+        {
+          "file": "08-customer-journey-one-stop-shop-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 6198
+        },
+        {
+          "file": "08-customer-journey-one-stop-shop-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 10466
+        },
+        {
+          "file": "08-customer-journey-one-stop-shop-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 8868
+        },
+        {
+          "file": "08-customer-journey-one-stop-shop-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 15864
+        },
+        {
+          "file": "08-customer-journey-one-stop-shop-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 11071
+        },
+        {
+          "file": "08-customer-journey-one-stop-shop-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 21810
+        },
+        {
+          "file": "08-customer-journey-one-stop-shop-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 39883
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "09-roadmap-completa",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "09-roadmap-completa-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 3859
+        },
+        {
+          "file": "09-roadmap-completa-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 6112
+        },
+        {
+          "file": "09-roadmap-completa-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 8657
+        },
+        {
+          "file": "09-roadmap-completa-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 13694
+        },
+        {
+          "file": "09-roadmap-completa-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 13041
+        },
+        {
+          "file": "09-roadmap-completa-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 22648
+        },
+        {
+          "file": "09-roadmap-completa-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 16469
+        },
+        {
+          "file": "09-roadmap-completa-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 30230
+        },
+        {
+          "file": "09-roadmap-completa-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 86706
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "10-ai-backbone",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "10-ai-backbone-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 6912
+        },
+        {
+          "file": "10-ai-backbone-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 9144
+        },
+        {
+          "file": "10-ai-backbone-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 23451
+        },
+        {
+          "file": "10-ai-backbone-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 31100
+        },
+        {
+          "file": "10-ai-backbone-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 40878
+        },
+        {
+          "file": "10-ai-backbone-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 54976
+        },
+        {
+          "file": "10-ai-backbone-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 56553
+        },
+        {
+          "file": "10-ai-backbone-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 80960
+        },
+        {
+          "file": "10-ai-backbone-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 122553
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "11-ui-income-check",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "11-ui-income-check-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 4011
+        },
+        {
+          "file": "11-ui-income-check-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 5772
+        },
+        {
+          "file": "11-ui-income-check-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 10077
+        },
+        {
+          "file": "11-ui-income-check-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 15000
+        },
+        {
+          "file": "11-ui-income-check-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 16409
+        },
+        {
+          "file": "11-ui-income-check-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 25268
+        },
+        {
+          "file": "11-ui-income-check-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 23169
+        },
+        {
+          "file": "11-ui-income-check-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 37060
+        },
+        {
+          "file": "11-ui-income-check-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 68038
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "12-ui-lawyer-dashboard",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "12-ui-lawyer-dashboard-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 3323
+        },
+        {
+          "file": "12-ui-lawyer-dashboard-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 4782
+        },
+        {
+          "file": "12-ui-lawyer-dashboard-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 9899
+        },
+        {
+          "file": "12-ui-lawyer-dashboard-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 14426
+        },
+        {
+          "file": "12-ui-lawyer-dashboard-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 15751
+        },
+        {
+          "file": "12-ui-lawyer-dashboard-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 25700
+        },
+        {
+          "file": "12-ui-lawyer-dashboard-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 24372
+        },
+        {
+          "file": "12-ui-lawyer-dashboard-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 38114
+        },
+        {
+          "file": "12-ui-lawyer-dashboard-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 57686
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "13-brand-architecture-3-opzioni",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "13-brand-architecture-3-opzioni-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 7278
+        },
+        {
+          "file": "13-brand-architecture-3-opzioni-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 10602
+        },
+        {
+          "file": "13-brand-architecture-3-opzioni-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 18372
+        },
+        {
+          "file": "13-brand-architecture-3-opzioni-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 28400
+        },
+        {
+          "file": "13-brand-architecture-3-opzioni-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 30287
+        },
+        {
+          "file": "13-brand-architecture-3-opzioni-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 48656
+        },
+        {
+          "file": "13-brand-architecture-3-opzioni-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 42732
+        },
+        {
+          "file": "13-brand-architecture-3-opzioni-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 71254
+        },
+        {
+          "file": "13-brand-architecture-3-opzioni-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 324363
+        }
+      ],
+      "heavy": [
+        {
+          "file": "13-brand-architecture-3-opzioni-fallback.png",
+          "bytes": 324363
+        }
+      ]
+    },
+    {
+      "base": "14-seo-strategy-table",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "14-seo-strategy-table-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 4879
+        },
+        {
+          "file": "14-seo-strategy-table-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 6860
+        },
+        {
+          "file": "14-seo-strategy-table-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 12549
+        },
+        {
+          "file": "14-seo-strategy-table-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 18330
+        },
+        {
+          "file": "14-seo-strategy-table-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 20550
+        },
+        {
+          "file": "14-seo-strategy-table-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 31342
+        },
+        {
+          "file": "14-seo-strategy-table-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 28085
+        },
+        {
+          "file": "14-seo-strategy-table-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 45090
+        },
+        {
+          "file": "14-seo-strategy-table-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 98750
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "15-il-sistema-e",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "15-il-sistema-e-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 1401
+        },
+        {
+          "file": "15-il-sistema-e-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 2434
+        },
+        {
+          "file": "15-il-sistema-e-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 2667
+        },
+        {
+          "file": "15-il-sistema-e-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 5330
+        },
+        {
+          "file": "15-il-sistema-e-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 3666
+        },
+        {
+          "file": "15-il-sistema-e-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 8856
+        },
+        {
+          "file": "15-il-sistema-e-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 4927
+        },
+        {
+          "file": "15-il-sistema-e-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 13224
+        },
+        {
+          "file": "15-il-sistema-e-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 188921
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "16-dati-ore-pagate-vs-reali",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "16-dati-ore-pagate-vs-reali-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 2790
+        },
+        {
+          "file": "16-dati-ore-pagate-vs-reali-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 3210
+        },
+        {
+          "file": "16-dati-ore-pagate-vs-reali-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 6620
+        },
+        {
+          "file": "16-dati-ore-pagate-vs-reali-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 9120
+        },
+        {
+          "file": "16-dati-ore-pagate-vs-reali-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 10151
+        },
+        {
+          "file": "16-dati-ore-pagate-vs-reali-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 15740
+        },
+        {
+          "file": "16-dati-ore-pagate-vs-reali-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 13259
+        },
+        {
+          "file": "16-dati-ore-pagate-vs-reali-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 21850
+        },
+        {
+          "file": "16-dati-ore-pagate-vs-reali-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 24477
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "17-quote-avvocato",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "17-quote-avvocato-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 5678
+        },
+        {
+          "file": "17-quote-avvocato-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 7902
+        },
+        {
+          "file": "17-quote-avvocato-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 15713
+        },
+        {
+          "file": "17-quote-avvocato-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 23548
+        },
+        {
+          "file": "17-quote-avvocato-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 25468
+        },
+        {
+          "file": "17-quote-avvocato-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 40716
+        },
+        {
+          "file": "17-quote-avvocato-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 34182
+        },
+        {
+          "file": "17-quote-avvocato-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 57734
+        },
+        {
+          "file": "17-quote-avvocato-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 65307
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "18-dynamic-point-allocation",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "18-dynamic-point-allocation-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 6661
+        },
+        {
+          "file": "18-dynamic-point-allocation-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 9126
+        },
+        {
+          "file": "18-dynamic-point-allocation-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 18242
+        },
+        {
+          "file": "18-dynamic-point-allocation-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 27386
+        },
+        {
+          "file": "18-dynamic-point-allocation-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 29445
+        },
+        {
+          "file": "18-dynamic-point-allocation-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 47420
+        },
+        {
+          "file": "18-dynamic-point-allocation-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 40055
+        },
+        {
+          "file": "18-dynamic-point-allocation-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 67314
+        },
+        {
+          "file": "18-dynamic-point-allocation-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 85567
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "19-who-will-benefit",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "19-who-will-benefit-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 2787
+        },
+        {
+          "file": "19-who-will-benefit-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 3974
+        },
+        {
+          "file": "19-who-will-benefit-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 6796
+        },
+        {
+          "file": "19-who-will-benefit-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 10680
+        },
+        {
+          "file": "19-who-will-benefit-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 10712
+        },
+        {
+          "file": "19-who-will-benefit-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 18460
+        },
+        {
+          "file": "19-who-will-benefit-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 14411
+        },
+        {
+          "file": "19-who-will-benefit-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 26792
+        },
+        {
+          "file": "19-who-will-benefit-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 38276
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "20-roadmap-sistemica-finale",
+      "nativeWidth": 4000,
+      "nativeHeight": 2250,
+      "widths": [
+        480,
+        960,
+        1440,
+        1920
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "20-roadmap-sistemica-finale-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 1852
+        },
+        {
+          "file": "20-roadmap-sistemica-finale-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 2696
+        },
+        {
+          "file": "20-roadmap-sistemica-finale-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 3292
+        },
+        {
+          "file": "20-roadmap-sistemica-finale-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 5950
+        },
+        {
+          "file": "20-roadmap-sistemica-finale-1440.avif",
+          "format": "avif",
+          "width": 1440,
+          "bytes": 4409
+        },
+        {
+          "file": "20-roadmap-sistemica-finale-1440.webp",
+          "format": "webp",
+          "width": 1440,
+          "bytes": 9736
+        },
+        {
+          "file": "20-roadmap-sistemica-finale-1920.avif",
+          "format": "avif",
+          "width": 1920,
+          "bytes": 5433
+        },
+        {
+          "file": "20-roadmap-sistemica-finale-1920.webp",
+          "format": "webp",
+          "width": 1920,
+          "bytes": 13688
+        },
+        {
+          "file": "20-roadmap-sistemica-finale-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 26072
+        }
+      ],
+      "heavy": []
+    }
+  ],
+  "telefono-terminale": [
+    {
+      "base": "01-cover-identita",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "01-cover-identita-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 4316
+        },
+        {
+          "file": "01-cover-identita-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 8718
+        },
+        {
+          "file": "01-cover-identita-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 8606
+        },
+        {
+          "file": "01-cover-identita-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 18422
+        },
+        {
+          "file": "01-cover-identita-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 10221
+        },
+        {
+          "file": "01-cover-identita-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 23766
+        },
+        {
+          "file": "01-cover-identita-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 84059
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "02-concept-sketches",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "02-concept-sketches-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 15957
+        },
+        {
+          "file": "02-concept-sketches-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 22238
+        },
+        {
+          "file": "02-concept-sketches-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 43012
+        },
+        {
+          "file": "02-concept-sketches-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 65174
+        },
+        {
+          "file": "02-concept-sketches-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 62935
+        },
+        {
+          "file": "02-concept-sketches-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 100248
+        },
+        {
+          "file": "02-concept-sketches-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 1232948
+        }
+      ],
+      "heavy": [
+        {
+          "file": "02-concept-sketches-fallback.png",
+          "bytes": 1232948
+        }
+      ]
+    },
+    {
+      "base": "03-moodboard",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "03-moodboard-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 21561
+        },
+        {
+          "file": "03-moodboard-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 29050
+        },
+        {
+          "file": "03-moodboard-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 58607
+        },
+        {
+          "file": "03-moodboard-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 87102
+        },
+        {
+          "file": "03-moodboard-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 86152
+        },
+        {
+          "file": "03-moodboard-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 132756
+        },
+        {
+          "file": "03-moodboard-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 773459
+        }
+      ],
+      "heavy": [
+        {
+          "file": "03-moodboard-fallback.png",
+          "bytes": 773459
+        }
+      ]
+    },
+    {
+      "base": "04-render-hero-fronte-retro",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": true,
+      "generated": [
+        {
+          "file": "04-render-hero-fronte-retro-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 11913
+        },
+        {
+          "file": "04-render-hero-fronte-retro-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 21532
+        },
+        {
+          "file": "04-render-hero-fronte-retro-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 26949
+        },
+        {
+          "file": "04-render-hero-fronte-retro-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 53732
+        },
+        {
+          "file": "04-render-hero-fronte-retro-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 35238
+        },
+        {
+          "file": "04-render-hero-fronte-retro-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 75590
+        },
+        {
+          "file": "04-render-hero-fronte-retro-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 240479
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "05-exploded-render",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": true,
+      "generated": [
+        {
+          "file": "05-exploded-render-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 15433
+        },
+        {
+          "file": "05-exploded-render-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 26422
+        },
+        {
+          "file": "05-exploded-render-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 39892
+        },
+        {
+          "file": "05-exploded-render-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 69600
+        },
+        {
+          "file": "05-exploded-render-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 56533
+        },
+        {
+          "file": "05-exploded-render-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 101672
+        },
+        {
+          "file": "05-exploded-render-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 293064
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "06-exploded-componenti-labels",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "06-exploded-componenti-labels-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 10259
+        },
+        {
+          "file": "06-exploded-componenti-labels-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 15602
+        },
+        {
+          "file": "06-exploded-componenti-labels-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 25583
+        },
+        {
+          "file": "06-exploded-componenti-labels-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 41616
+        },
+        {
+          "file": "06-exploded-componenti-labels-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 34676
+        },
+        {
+          "file": "06-exploded-componenti-labels-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 59916
+        },
+        {
+          "file": "06-exploded-componenti-labels-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 183938
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "07-disegno-tecnico-quotato",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "07-disegno-tecnico-quotato-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 12529
+        },
+        {
+          "file": "07-disegno-tecnico-quotato-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 17618
+        },
+        {
+          "file": "07-disegno-tecnico-quotato-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 38708
+        },
+        {
+          "file": "07-disegno-tecnico-quotato-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 54898
+        },
+        {
+          "file": "07-disegno-tecnico-quotato-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 40849
+        },
+        {
+          "file": "07-disegno-tecnico-quotato-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 84848
+        },
+        {
+          "file": "07-disegno-tecnico-quotato-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 232327
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "08-ui-storyboard-assistente-lam",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "08-ui-storyboard-assistente-lam-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 9289
+        },
+        {
+          "file": "08-ui-storyboard-assistente-lam-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 13952
+        },
+        {
+          "file": "08-ui-storyboard-assistente-lam-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 24447
+        },
+        {
+          "file": "08-ui-storyboard-assistente-lam-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 46544
+        },
+        {
+          "file": "08-ui-storyboard-assistente-lam-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 33276
+        },
+        {
+          "file": "08-ui-storyboard-assistente-lam-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 72728
+        },
+        {
+          "file": "08-ui-storyboard-assistente-lam-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 251864
+        }
+      ],
+      "heavy": []
+    },
+    {
+      "base": "09-modello-fisico-in-mano",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": true,
+      "generated": [
+        {
+          "file": "09-modello-fisico-in-mano-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 9351
+        },
+        {
+          "file": "09-modello-fisico-in-mano-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 17246
+        },
+        {
+          "file": "09-modello-fisico-in-mano-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 19952
+        },
+        {
+          "file": "09-modello-fisico-in-mano-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 45338
+        },
+        {
+          "file": "09-modello-fisico-in-mano-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 26396
+        },
+        {
+          "file": "09-modello-fisico-in-mano-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 62812
+        },
+        {
+          "file": "09-modello-fisico-in-mano-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 773288
+        }
+      ],
+      "heavy": [
+        {
+          "file": "09-modello-fisico-in-mano-fallback.png",
+          "bytes": 773288
+        }
+      ]
+    },
+    {
+      "base": "10-uso-musica-e-qr",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": true,
+      "generated": [
+        {
+          "file": "10-uso-musica-e-qr-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 10144
+        },
+        {
+          "file": "10-uso-musica-e-qr-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 17112
+        },
+        {
+          "file": "10-uso-musica-e-qr-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 21292
+        },
+        {
+          "file": "10-uso-musica-e-qr-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 43752
+        },
+        {
+          "file": "10-uso-musica-e-qr-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 26669
+        },
+        {
+          "file": "10-uso-musica-e-qr-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 60758
+        },
+        {
+          "file": "10-uso-musica-e-qr-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 601862
+        }
+      ],
+      "heavy": [
+        {
+          "file": "10-uso-musica-e-qr-fallback.png",
+          "bytes": 601862
+        }
+      ]
+    },
+    {
+      "base": "11-uso-chiamata-e-assistente-vocale",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": true,
+      "generated": [
+        {
+          "file": "11-uso-chiamata-e-assistente-vocale-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 10476
+        },
+        {
+          "file": "11-uso-chiamata-e-assistente-vocale-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 17196
+        },
+        {
+          "file": "11-uso-chiamata-e-assistente-vocale-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 24279
+        },
+        {
+          "file": "11-uso-chiamata-e-assistente-vocale-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 46146
+        },
+        {
+          "file": "11-uso-chiamata-e-assistente-vocale-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 32773
+        },
+        {
+          "file": "11-uso-chiamata-e-assistente-vocale-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 68292
+        },
+        {
+          "file": "11-uso-chiamata-e-assistente-vocale-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 631488
+        }
+      ],
+      "heavy": [
+        {
+          "file": "11-uso-chiamata-e-assistente-vocale-fallback.png",
+          "bytes": 631488
+        }
+      ]
+    },
+    {
+      "base": "12-uso-cuffie-e-tasca",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": true,
+      "generated": [
+        {
+          "file": "12-uso-cuffie-e-tasca-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 15075
+        },
+        {
+          "file": "12-uso-cuffie-e-tasca-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 24358
+        },
+        {
+          "file": "12-uso-cuffie-e-tasca-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 43592
+        },
+        {
+          "file": "12-uso-cuffie-e-tasca-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 76232
+        },
+        {
+          "file": "12-uso-cuffie-e-tasca-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 70300
+        },
+        {
+          "file": "12-uso-cuffie-e-tasca-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 126022
+        },
+        {
+          "file": "12-uso-cuffie-e-tasca-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 873034
+        }
+      ],
+      "heavy": [
+        {
+          "file": "12-uso-cuffie-e-tasca-fallback.png",
+          "bytes": 873034
+        }
+      ]
+    },
+    {
+      "base": "13-ergonomia-grip-sequence",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": true,
+      "generated": [
+        {
+          "file": "13-ergonomia-grip-sequence-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 7570
+        },
+        {
+          "file": "13-ergonomia-grip-sequence-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 12334
+        },
+        {
+          "file": "13-ergonomia-grip-sequence-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 15948
+        },
+        {
+          "file": "13-ergonomia-grip-sequence-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 31002
+        },
+        {
+          "file": "13-ergonomia-grip-sequence-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 20931
+        },
+        {
+          "file": "13-ergonomia-grip-sequence-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 41930
+        },
+        {
+          "file": "13-ergonomia-grip-sequence-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 409642
+        }
+      ],
+      "heavy": [
+        {
+          "file": "13-ergonomia-grip-sequence-fallback.png",
+          "bytes": 409642
+        }
+      ]
+    },
+    {
+      "base": "14-mappa-posizionamento-mercato",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "14-mappa-posizionamento-mercato-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 19902
+        },
+        {
+          "file": "14-mappa-posizionamento-mercato-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 26476
+        },
+        {
+          "file": "14-mappa-posizionamento-mercato-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 66617
+        },
+        {
+          "file": "14-mappa-posizionamento-mercato-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 87510
+        },
+        {
+          "file": "14-mappa-posizionamento-mercato-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 95450
+        },
+        {
+          "file": "14-mappa-posizionamento-mercato-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 129410
+        },
+        {
+          "file": "14-mappa-posizionamento-mercato-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 319543
+        }
+      ],
+      "heavy": [
+        {
+          "file": "14-mappa-posizionamento-mercato-fallback.png",
+          "bytes": 319543
+        }
+      ]
+    },
+    {
+      "base": "15-personas-empathy-map",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "15-personas-empathy-map-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 22168
+        },
+        {
+          "file": "15-personas-empathy-map-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 29932
+        },
+        {
+          "file": "15-personas-empathy-map-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 71295
+        },
+        {
+          "file": "15-personas-empathy-map-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 92888
+        },
+        {
+          "file": "15-personas-empathy-map-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 100794
+        },
+        {
+          "file": "15-personas-empathy-map-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 136134
+        },
+        {
+          "file": "15-personas-empathy-map-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 350545
+        }
+      ],
+      "heavy": [
+        {
+          "file": "15-personas-empathy-map-fallback.png",
+          "bytes": 350545
+        }
+      ]
+    },
+    {
+      "base": "16-value-proposition-canvas",
+      "nativeWidth": 1241,
+      "nativeHeight": 1754,
+      "widths": [
+        480,
+        960,
+        1241
+      ],
+      "fallbackWidth": 960,
+      "highQuality": false,
+      "generated": [
+        {
+          "file": "16-value-proposition-canvas-480.avif",
+          "format": "avif",
+          "width": 480,
+          "bytes": 19808
+        },
+        {
+          "file": "16-value-proposition-canvas-480.webp",
+          "format": "webp",
+          "width": 480,
+          "bytes": 26562
+        },
+        {
+          "file": "16-value-proposition-canvas-960.avif",
+          "format": "avif",
+          "width": 960,
+          "bytes": 60864
+        },
+        {
+          "file": "16-value-proposition-canvas-960.webp",
+          "format": "webp",
+          "width": 960,
+          "bytes": 81276
+        },
+        {
+          "file": "16-value-proposition-canvas-1241.avif",
+          "format": "avif",
+          "width": 1241,
+          "bytes": 84389
+        },
+        {
+          "file": "16-value-proposition-canvas-1241.webp",
+          "format": "webp",
+          "width": 1241,
+          "bytes": 118288
+        },
+        {
+          "file": "16-value-proposition-canvas-fallback.png",
+          "format": "png",
+          "width": 960,
+          "bytes": 298670
+        }
+      ],
+      "heavy": []
+    }
+  ]
+}
