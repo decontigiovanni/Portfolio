@@ -1,0 +1,13 @@
+{
+  "name": "optimize-images",
+  "private": true,
+  "version": "1.0.0",
+  "description": "One-off local script to generate responsive AVIF/WebP/PNG derivatives for the BrandMR and Telefono Terminale portfolio galleries. Not part of the site's runtime.",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
