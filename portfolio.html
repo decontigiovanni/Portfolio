@@ -495,7 +495,7 @@
                 return img;
             }
 
-            if (story.intro) {
+            if (story.intro && story.intro.type === "video") {
                 const intro = story.intro;
                 const introEl = document.createElement("div");
                 introEl.className = "panel-story-intro";
@@ -521,6 +521,23 @@
                 introEl.appendChild(lockup);
 
                 container.appendChild(introEl);
+            } else if (story.intro && story.intro.type === "summary") {
+                const summary = document.createElement("div");
+                summary.className = "panel-story-summary";
+                story.intro.items.forEach(function (item) {
+                    const entry = document.createElement("div");
+                    entry.className = "panel-story-summary-item";
+                    const label = document.createElement("span");
+                    label.className = "panel-story-summary-label";
+                    label.textContent = item.label;
+                    const text = document.createElement("span");
+                    text.className = "panel-story-summary-text";
+                    text.textContent = item.text;
+                    entry.appendChild(label);
+                    entry.appendChild(text);
+                    summary.appendChild(entry);
+                });
+                container.appendChild(summary);
             }
 
             story.sections.forEach(function (section) {
@@ -550,14 +567,78 @@
                     } else if (block.type === "pair") {
                         const pair = document.createElement("div");
                         pair.className = "panel-story-pair";
+                        if (block.tall) {
+                            pair.classList.add("panel-story-pair--tall");
+                        }
                         block.files.forEach(function (file, i) {
-                            pair.appendChild(makeImg(file, block.alts[i]));
+                            const cell = document.createElement("div");
+                            cell.className = "panel-story-pair-cell";
+                            cell.appendChild(makeImg(file, block.alts[i]));
+                            pair.appendChild(cell);
                         });
                         const caption = document.createElement("p");
                         caption.className = "panel-story-pair-caption";
                         caption.textContent = block.caption;
                         pair.appendChild(caption);
                         container.appendChild(pair);
+                    } else if (block.type === "text") {
+                        const textEl = document.createElement("div");
+                        textEl.className = "panel-story-text-block";
+                        if (block.heading) {
+                            const h = document.createElement("h5");
+                            h.className = "panel-story-text-heading";
+                            h.textContent = block.heading;
+                            textEl.appendChild(h);
+                        }
+                        const p = document.createElement("p");
+                        p.textContent = block.text;
+                        textEl.appendChild(p);
+                        container.appendChild(textEl);
+                    } else if (block.type === "quote") {
+                        const quote = document.createElement("blockquote");
+                        quote.className = "panel-story-quote";
+                        const p = document.createElement("p");
+                        p.textContent = block.text;
+                        quote.appendChild(p);
+                        container.appendChild(quote);
+                    } else if (block.type === "figure") {
+                        const wrap = document.createElement("div");
+                        wrap.className = "panel-story-figure-full";
+                        if (block.tall) {
+                            wrap.classList.add("panel-story-figure-full--tall");
+                        }
+                        wrap.appendChild(makeImg(block.file, block.alt));
+                        container.appendChild(wrap);
+                        if (block.caption) {
+                            const caption = document.createElement("p");
+                            caption.className = "panel-story-figure-full-caption";
+                            caption.textContent = block.caption;
+                            container.appendChild(caption);
+                        }
+                    } else if (block.type === "expand") {
+                        const details = document.createElement("details");
+                        details.className = "panel-story-expand";
+                        const summaryEl = document.createElement("summary");
+                        summaryEl.textContent = block.label;
+                        details.appendChild(summaryEl);
+                        const wrap = document.createElement("div");
+                        wrap.className = "panel-story-figure-full";
+                        wrap.appendChild(makeImg(block.file, block.alt));
+                        details.appendChild(wrap);
+                        container.appendChild(details);
+                    } else if (block.type === "credits") {
+                        const credits = document.createElement("div");
+                        credits.className = "panel-story-credits";
+                        const role = document.createElement("p");
+                        role.innerHTML = "<strong>My role:</strong> " + block.role;
+                        credits.appendChild(role);
+                        const team = document.createElement("p");
+                        team.innerHTML = "<strong>Team:</strong> " + block.team.join(" · ");
+                        credits.appendChild(team);
+                        const context = document.createElement("p");
+                        context.innerHTML = "<strong>Context:</strong> " + block.context;
+                        credits.appendChild(context);
+                        container.appendChild(credits);
                     } else if (block.type === "grid") {
                         const grid = document.createElement("div");
                         grid.className = "panel-story-grid";
