@@ -471,6 +471,22 @@
             },
             "beyond-pink-and-blue": {
                 basePath: "Immagini/Portfolio images/04 Beyond Blue and Pink/",
+                dims: {
+                    "02_catalyst-47-2025.png": [1250, 770],
+                    "03-stimuli-01-chainsaw.png": [915, 520],
+                    "03-stimuli-02-motorbike.png": [915, 670],
+                    "03-stimuli-03-tie.png": [915, 1150],
+                    "03-stimuli-04-car.png": [915, 670],
+                    "03-stimuli-05-towel.png": [915, 540],
+                    "03-stimuli-06-dog.png": [915, 780],
+                    "03-stimuli-07-doll.png": [830, 900],
+                    "03-stimuli-08-handbag.png": [830, 770],
+                    "03-stimuli-09-teaset.png": [830, 860],
+                    "04_culture-color-analysis.png": [1800, 9300],
+                    "05_generation-color-analysis.png": [1800, 9300],
+                    "06_alluvial-color-objecttype.png": [2350, 9050],
+                    "07_results-hypotheses-table.png": [1540, 2050]
+                },
                 intro: {
                     type: "summary",
                     items: [
@@ -583,6 +599,11 @@
                 img.alt = alt;
                 img.loading = imageCount < 2 ? "eager" : "lazy";
                 img.decoding = "async";
+                const dims = story.dims && story.dims[file];
+                if (dims) {
+                    img.width = dims[0];
+                    img.height = dims[1];
+                }
                 imageCount++;
                 return img;
             }
