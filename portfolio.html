@@ -56,8 +56,8 @@
                     <span class="product-price">Systemic service redesign</span>
                 </div>
             </a>
-            <a class="grid-cell product-card project-card" href="project-03.html" data-tags="ux visual" data-description="Quantitative cross-cultural research on color–gender associations to inform responsible visual design decisions." data-role="Research / Methodology / Analysis"
-                data-year="2025" data-scope="Quantitative research / Survey design / Data analysis / Insights synthesis">
+            <a class="grid-cell product-card project-card" href="project-03.html" data-tags="ux visual" data-description="A cross-cultural, cross-generational study of how colour reinforces — or overrides — the gender we assign to objects." data-role="Study design & statistical analysis"
+                data-year="2025" data-scope="Quantitative research / Survey design / Data analysis / Insights synthesis" data-gallery="beyond-pink-and-blue">
                 <div class="product-image project-image">
                     <span class="project-index">03</span>
                     <span class="project-stamp">UX / Visual</span>
@@ -469,6 +469,98 @@
                     }
                 ]
             },
+            "beyond-pink-and-blue": {
+                basePath: "Immagini/Portfolio images/04 Beyond Blue and Pink/",
+                intro: {
+                    type: "summary",
+                    items: [
+                        { label: "Question", text: "Can colour override the gender we assign to an object?" },
+                        { label: "Method", text: "247 adults · 15 objects × 6 colours · 90 ratings each · linear mixed-effects model in SPSS" },
+                        { label: "Finding", text: "The schemas persist; culture predicts rigidity more than generation." },
+                        { label: "My role", text: "Study design + statistical analysis" }
+                    ]
+                },
+                sections: [
+                    {
+                        title: "When images remain",
+                        blocks: [
+                            { type: "row", file: "02_catalyst-47-2025.png", alt: "Mirror selfie of a fitness influencer against a red wall — the course image that sparked the study.", text: "The project began with a single image from the course dataset (47_2025): a fitness influencer photographed in a mirror — visually flawless, emotionally absent, an echo of the protagonist of Magnus von Horn's Sweat (2020). Hyper-feminine visual codes — pastel tones, stylised perfection — that construct an identity and, at the same time, confine it. It left me with a question I wanted to test, not just assert." },
+                            { type: "quote", text: "To what extent does colour override — or reinforce — the gender we already assign to an object?" }
+                        ]
+                    },
+                    {
+                        title: "Designing a way to measure it",
+                        blocks: [
+                            { type: "text", text: "This is where my contribution starts. I designed a within- and between-subjects experiment built to isolate the effect of colour from the object itself." },
+                            { type: "text", text: "Fifteen objects — standardised for style, perspective and lighting — split into three types: masculine (chainsaw, motorbike, tie), feminine (tea set, handbag) and neutral (car, towel, German Shepherd). Each was programmatically recoloured in six hues drawn from prior literature (pink, red, light blue, blue, light green, green), producing 90 colour–object pairings. Participants rated each on a 1–7 \"appropriateness\" scale, kept deliberately fast to capture the affective judgment before reflection." },
+                            { type: "text", text: "The sample — 247 adults, balanced across two cultural spheres (Western / East Asian) and three generations (Boomer, Millennial, Gen Z) — was sized with an a-priori G*Power analysis to detect medium effects." },
+                            {
+                                type: "grid",
+                                files: [
+                                    "03-stimuli-01-chainsaw.png", "03-stimuli-02-motorbike.png", "03-stimuli-03-tie.png",
+                                    "03-stimuli-04-car.png", "03-stimuli-05-towel.png", "03-stimuli-06-dog.png",
+                                    "03-stimuli-07-doll.png", "03-stimuli-08-handbag.png", "03-stimuli-09-teaset.png"
+                                ],
+                                alts: [
+                                    "Red chainsaw shown in its highest-rated colour.",
+                                    "Red motorbike shown in its highest-rated colour.",
+                                    "Navy tie shown in its highest-rated colour.",
+                                    "Red car shown in its highest-rated colour.",
+                                    "Light blue towel shown in its highest-rated colour.",
+                                    "German Shepherd in a red coat, shown in its highest-rated colour.",
+                                    "Baby doll dressed in light blue, shown in its highest-rated colour.",
+                                    "Light blue handbag shown in its highest-rated colour.",
+                                    "Light blue tea set shown in its highest-rated colour."
+                                ],
+                                caption: "Nine of the fifteen study objects, each shown in its highest-rated colour."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Reading 22,000 judgments",
+                        blocks: [
+                            { type: "text", text: "I analysed the data in SPSS with a linear mixed-effects model: colour and object type as within-subject factors, culture and generation between-subjects, and participant ID as a random intercept to absorb individual baselines. Internal consistency was high (Cronbach's α ≥ .95)." },
+                            { type: "text", text: "Two small-multiple views let the pattern surface object by object — one split by culture, one by generation." },
+                            {
+                                type: "pair",
+                                tall: true,
+                                files: ["04_culture-color-analysis.png", "05_generation-color-analysis.png"],
+                                alts: [
+                                    "Small-multiple scatter plots of colour appropriateness per object, split by Western and East Asian participants.",
+                                    "Small-multiple scatter plots of colour appropriateness per object, split by Gen Z, Millennial and Baby Boomer participants."
+                                ],
+                                caption: "Left: split by culture. Right: split by generation. Scroll within each chart to see every object."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Culture holds tighter than age",
+                        blocks: [
+                            { type: "text", text: "Congruent pairings won — pink on feminine objects, blue on masculine — confirming the schemas are still alive (H1). Boomers reacted more sharply against incongruent pairings (H2); Millennials and Gen Z drifted toward flexibility, but not significantly (H3 — directional only). The sharper line was cultural: East Asian participants rated red masculine objects as more appropriate (H4), while the pink–femininity link was strongest in the West (H5)." },
+                            { type: "quote", text: "The headline isn't that stereotypes persist — it's that they're anchored more by cultural frame than by generation." },
+                            { type: "figure", tall: true, file: "06_alluvial-color-objecttype.png", alt: "Alluvial diagram flowing six colours into masculine, neutral and feminine object types.", caption: "Six colours flowing into masculine, neutral and feminine object types." },
+                            { type: "expand", label: "See the full results table", file: "07_results-hypotheses-table.png", alt: "Results table summarising hypotheses H1–H5 with estimates, p-values and null-hypothesis decisions." }
+                        ]
+                    },
+                    {
+                        title: "What it can and can't claim",
+                        blocks: [
+                            { type: "text", text: "The sample was powered for medium effects but fell short of the ~304 participants needed to resolve three-way interactions cleanly, and Gen X was underrepresented — so the generational trends are suggestive, not settled. I state this plainly because a study is only as useful as its stated boundaries." }
+                        ]
+                    },
+                    {
+                        title: "Credits",
+                        blocks: [
+                            {
+                                type: "credits",
+                                role: "Study design and statistical analysis (experimental design, SPSS, linear mixed-effects model).",
+                                team: ["Grigoris Bodiotis", "Giovanni De Conti", "Yutong Luo", "Menno Poorthuis"],
+                                context: "IDEM220 — \"When Images Remain\", 2025. Poster and information design as the group's synthesis deliverable."
+                            }
+                        ]
+                    }
+                ]
+            }
         };
 
         const filterChips = document.querySelectorAll(".chip");
