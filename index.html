@@ -32,34 +32,34 @@
 
     <!-- Photo stack -->
     <div class="photo-stack">
-        <img src="Immagini/03.jpg" alt="Foto 1">
-        <img src="Immagini/08.jpg" class="vertical" alt="Foto 2">
-        <img src="Immagini/10.jpg" alt="Foto 3">
-        <img src="Immagini/13.jpg" class="vertical" alt="Foto 4">
-        <img src="Immagini/14.jpg" alt="Foto 5">
-        <img src="Immagini/16.jpg" alt="Foto 6">
-        <img src="Immagini/27.jpg" class="vertical" alt="Foto 7">
-        <img src="Immagini/26.jpg" alt="Foto 8">
-        <img src="Immagini/15.jpg" alt="Foto 9">
-        <img src="Immagini/24.jpg" alt="Foto 10">
-        <img src="Immagini/23.jpg" alt="Foto 11">
-        <img src="Immagini/22.jpg" class="vertical" alt="Foto 12">
-        <img src="Immagini/21.jpg" class="vertical" alt="Foto 13">
-        <img src="Immagini/20.jpg" alt="Foto 14">
-        <img src="Immagini/19.jpg" class="vertical" alt="Foto 15">
-        <img src="Immagini/18.jpg" alt="Foto 16">
-        <img src="Immagini/17.jpg" alt="Foto 17">
-        <!-- <img src="Immagini/01.jpg" alt="Foto 18"> troppo grande probabilmente -->
-        <img src="Immagini/02.jpg" alt="Foto 19">
-        <img src="Immagini/04.jpg" class="vertical" alt="Foto 20">
-        <img src="Immagini/05.jpg" class="vertical" alt="Foto 21">
-        <img src="Immagini/07.jpg" class="vertical" alt="Foto 22">
-        <img src="Immagini/09.jpg" class="vertical" alt="Foto 23">
-        <!-- <img src="Immagini/12.jpg" class="vertical" alt="Foto 24"> troppo grande probabilmente -->
-        <img src="Immagini/13.jpg" class="vertical" alt="Foto 25">
-        <img src="Immagini/28.jpg" alt="Foto 26">
-        <img src="Immagini/29.jpg" class="vertical" alt="Foto 27">
-        <img src="Immagini/30.jpg" alt="Foto 28">
+        <img src="Immagini/Home images/03.jpg" alt="Foto 1">
+        <img src="Immagini/Home images/08.jpg" class="vertical" alt="Foto 2">
+        <img src="Immagini/Home images/10.jpg" alt="Foto 3">
+        <img src="Immagini/Home images/13.jpg" class="vertical" alt="Foto 4">
+        <img src="Immagini/Home images/14.jpg" alt="Foto 5">
+        <img src="Immagini/Home images/16.jpg" alt="Foto 6">
+        <img src="Immagini/Home images/27.jpg" class="vertical" alt="Foto 7">
+        <img src="Immagini/Home images/26.jpg" alt="Foto 8">
+        <img src="Immagini/Home images/15.jpg" alt="Foto 9">
+        <img src="Immagini/Home images/24.jpg" alt="Foto 10">
+        <img src="Immagini/Home images/23.jpg" alt="Foto 11">
+        <img src="Immagini/Home images/22.jpg" class="vertical" alt="Foto 12">
+        <img src="Immagini/Home images/21.jpg" class="vertical" alt="Foto 13">
+        <img src="Immagini/Home images/20.jpg" alt="Foto 14">
+        <img src="Immagini/Home images/19.jpg" class="vertical" alt="Foto 15">
+        <img src="Immagini/Home images/18.jpg" alt="Foto 16">
+        <img src="Immagini/Home images/17.jpg" alt="Foto 17">
+        <!-- <img src="Immagini/Home images/01.jpg" alt="Foto 18"> troppo grande probabilmente -->
+        <img src="Immagini/Home images/02.jpg" alt="Foto 19">
+        <img src="Immagini/Home images/04.jpg" class="vertical" alt="Foto 20">
+        <img src="Immagini/Home images/05.jpg" class="vertical" alt="Foto 21">
+        <img src="Immagini/Home images/07.jpg" class="vertical" alt="Foto 22">
+        <img src="Immagini/Home images/09.jpg" class="vertical" alt="Foto 23">
+        <!-- <img src="Immagini/Home images/12.jpg" class="vertical" alt="Foto 24"> troppo grande probabilmente -->
+        <img src="Immagini/Home images/13.jpg" class="vertical" alt="Foto 25">
+        <img src="Immagini/Home images/28.jpg" alt="Foto 26">
+        <img src="Immagini/Home images/29.jpg" class="vertical" alt="Foto 27">
+        <img src="Immagini/Home images/30.jpg" alt="Foto 28">
 
 
     </div>
@@ -119,7 +119,9 @@
         }
 
         function stopTweens(el) {
-            try { gsap.killTweensOf(el); } catch (e) {}
+            try {
+                gsap.killTweensOf(el);
+            } catch (e) {}
         }
 
         function showNextPhoto() {
@@ -134,7 +136,10 @@
 
             // create draggable on the current photo
             try {
-                Draggable.create(photo, { type: 'x,y', inertia: true });
+                Draggable.create(photo, {
+                    type: 'x,y',
+                    inertia: true
+                });
             } catch (e) {}
 
             gsap.fromTo(photo, {
@@ -157,7 +162,11 @@
                 duration: 0.8,
                 delay: 4,
                 onComplete: () => {
-                    gsap.set(photo, { x: 0, y: 0, clearProps: 'transform' });
+                    gsap.set(photo, {
+                        x: 0,
+                        y: 0,
+                        clearProps: 'transform'
+                    });
                     killDraggableIfAny(photo);
                 }
             });
@@ -181,8 +190,12 @@
                 intervalId = null;
             }
 
-            try { Draggable.getAll().forEach(d => d.kill()); } catch (e) {}
-            try { gsap.killTweensOf('.photo-stack img'); } catch (e) {}
+            try {
+                Draggable.getAll().forEach(d => d.kill());
+            } catch (e) {}
+            try {
+                gsap.killTweensOf('.photo-stack img');
+            } catch (e) {}
 
             gsap.to('.photo-stack img', {
                 opacity: 0,
@@ -195,9 +208,14 @@
 
         function resumeAutoPhotos() {
             // ensure images are reset and start the interval again
-            try { gsap.killTweensOf('.photo-stack img'); } catch (e) {}
+            try {
+                gsap.killTweensOf('.photo-stack img');
+            } catch (e) {}
             photos.forEach(p => {
-                gsap.set(p, { opacity: 0, clearProps: 'transform' });
+                gsap.set(p, {
+                    opacity: 0,
+                    clearProps: 'transform'
+                });
                 p.style.zIndex = 0;
             });
             // small delay to ensure styles applied, then restart
@@ -207,14 +225,14 @@
         }
 
         // stop animations early on internal navigation or tab change
-        document.addEventListener('click', function (e) {
+        document.addEventListener('click', function(e) {
             const a = e.target.closest('a');
             if (!a) return;
             if (a.target === '_blank' || (a.href && a.href.indexOf(location.origin) !== 0)) return;
             stopAutoPhotosAndHide();
         }, true);
 
-        document.addEventListener('visibilitychange', function () {
+        document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
                 stopAutoPhotosAndHide();
             } else {

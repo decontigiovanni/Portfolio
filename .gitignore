@@ -1,7 +1,3 @@
 .DS_Store
 **/.DS_Store
 ~$*
-
-# Raw high-res source exports (masters) — only optimized derivatives are committed
-Immagini/Portfolio images/
-tools/optimize-images/node_modules/
