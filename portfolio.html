@@ -35,7 +35,7 @@
     <main class="portfolio-main">
         <section class="store-grid portfolio-grid" aria-live="polite">
             <a class="grid-cell product-card project-card" href="project-01.html" data-tags="video visual fashion" data-description="Research-driven media platform that reframes second-hand fashion as a contemporary, everyday practice through an editorial system and visual identity."
-                data-role="Creative / Strategic / Artistic lead" data-year="2019–2022" data-scope="Research / Editorial direction / Visual system / Content production">
+                data-role="Creative / Strategic / Artistic lead" data-year="2019–2022" data-scope="Research / Editorial direction / Visual system / Content production" data-gallery="unposted90s">
                 <div class="product-image project-image">
                     <span class="project-index">01</span>
                     <span class="project-stamp">Video / Visual / Fashion</span>
@@ -47,7 +47,7 @@
             </a>
             <a class="grid-cell product-card project-card" href="project-02.html" data-tags="product ux" data-description="Systemic redesign of Dutch social advocacy services: a one-stop mediator service with AI-assisted intake and a phased roadmap for scaling."
                 data-role="Strategic & systemic design lead" data-year="2025" data-scope="System mapping / Research synthesis / Strategic framing / Service architecture" data-gallery="brandmr">
-                <div class="product-image project-image" style="--project-image: url('../Immagini/brandmr/08-customer-journey-one-stop-shop-960.webp');">
+                <div class="product-image project-image">
                     <span class="project-index">02</span>
                     <span class="project-stamp">Product / UX</span>
                 </div>
@@ -124,7 +124,7 @@
             </a>
             <a class="grid-cell product-card project-card" href="project-09.html" data-tags="product ux" data-description="Bachelor's thesis project: a dumbphone designed to counter the dopamine-driven attention economy, balancing digital well-being with everyday functionality — from concept sketches to a working physical prototype."
                 data-role="Product designer / 3D modeling / Prototyping" data-year="2024" data-scope="Research / Concept sketching / 3D modeling / Physical prototyping / UI concept design" data-gallery="telefono-terminale">
-                <div class="product-image project-image" style="--project-image: url('../Immagini/telefono-terminale/04-render-hero-fronte-retro-960.webp');">
+                <div class="product-image project-image">
                     <span class="project-index">09</span>
                     <span class="project-stamp">Product / UX</span>
                 </div>
@@ -178,8 +178,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <script src="js/gallery-data.js"></script>
-    <script src="js/gallery.js"></script>
 
 
     <script>
@@ -252,15 +250,355 @@
     </script>
 
     <script>
+        /* Section-based narrative sequence for projects with a long-form case study
+           (Unposted90s, BrandMR, Telefono Terminale). Every section holds an ordered
+           list of "blocks" of different types (row / pair / grid / stats), rendered
+           generically by renderProjectStory() below. File order reflects verified
+           real content, not necessarily original filename order (BrandMR's source
+           filenames don't reliably match their slide content). */
+        const PROJECT_STORIES = {
+            unposted90s: {
+                basePath: "Immagini/Portfolio images/03 Unposted90s/",
+                intro: {
+                    videoSrc: "intro-pitch-u90s.mp4",
+                    poster: "intro-pitch-u90s-poster.jpg",
+                    logo: { file: "Artboard 1.png", alt: "Unposted90s logo." },
+                    payoff: "Making second-hand the obvious choice."
+                },
+                sections: [
+                    {
+                        title: "The tension",
+                        blocks: [
+                            {
+                                type: "pair",
+                                files: ["Artboard 8.png", "Artboard 10.png"],
+                                alts: [
+                                    "Editorial luxury imagery: Bella Hadid with a Michael Kors bag, Tyler the Creator in Gucci.",
+                                    "Aerial view of the Atacama desert clothing dump."
+                                ],
+                                caption: "Between the people priced out of it, and the people it convinces to throw everything away a month later."
+                            }
+                        ]
+                    },
+                    {
+                        title: "The opportunity",
+                        blocks: [
+                            {
+                                type: "row",
+                                file: "Artboard 17.png",
+                                alt: "Chart: the resale market is set to nearly double by 2027, closing in on $350B.",
+                                text: "The second-hand market isn't a niche for the ethically minded — it's where the industry is actually heading: resale is on track to nearly double by 2027, closing in on $350B (source: ThredUp). That's the shift Unposted90s is built to ride, not a side bet on sustainability."
+                            }
+                        ]
+                    },
+                    {
+                        title: "The world of u90s",
+                        blocks: [
+                            {
+                                type: "row",
+                                file: "Artboard 12.png",
+                                alt: "1990s-styled set: orange Eames-style chairs, retro ephemera, CRT televisions.",
+                                text: "This is where the contribution actually lives: a fully built 90s set — orange Eames-style chairs, a wall of vinyl and comic covers, CRTs flickering with static — the physical language the whole channel is shot inside."
+                            },
+                            {
+                                type: "grid",
+                                files: ["Artboard 14.png", "Artboard 26.png", "Artboard 27.png"],
+                                alts: [
+                                    "Content thumbnail: “FOTO OUTFIT,” two hosts in front of a neon-lit blue wall.",
+                                    "Content thumbnail: close-up on a black-and-white Nike Dunk sneaker.",
+                                    "Content thumbnail: “VINTAGE SHOP PADOVA,” two hosts in vintage jackets."
+                                ],
+                                caption: "The system behind it: a red/navy/cream palette, torn paper, hand lettering — repeated until it's recognisable before the video even starts."
+                            }
+                        ]
+                    },
+                    {
+                        title: "Traction",
+                        blocks: [
+                            {
+                                type: "stats",
+                                intro: "The video already delivers the reveal — here's just the receipts.",
+                                items: [
+                                    { value: "10.6K", label: "Subscribers" },
+                                    { value: "420K", label: "Views" },
+                                    { value: "25.7K", label: "Hours watched" },
+                                    { value: "5M", label: "Impressions" },
+                                    { value: "27K", label: "TikTok followers" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: "The number that matters",
+                        blocks: [
+                            {
+                                type: "row",
+                                file: "Artboard 23.png",
+                                alt: "Engagement rate chart: Unposted90s vs. the category average on Instagram and YouTube.",
+                                text: "Engagement rate = views over interactions. Against the category average for 10–50K-subscriber accounts, Unposted90s comes out ahead on both platforms: 5.13% vs. 2.23% on Instagram, 3.4% vs. 0.4% on YouTube — the one number that's both differentiating and defensible."
+                            }
+                        ]
+                    },
+                    {
+                        title: "The proof",
+                        blocks: [
+                            {
+                                type: "pair",
+                                files: ["Artboard 24.png", "Artboard 25.png"],
+                                alts: [
+                                    "Partnership with Vibram.",
+                                    "Grid of aligned sustainable brands, including Patagonia, Timberland, Rifo and Nike Move to Zero."
+                                ],
+                                caption: "Credible brands validating the thesis — a stronger close than another chart."
+                            }
+                        ]
+                    }
+                ]
+            },
+            brandmr: {
+                basePath: "Immagini/Portfolio images/01 BrandMR/",
+                sections: [
+                    {
+                        title: "Hook",
+                        blocks: [
+                            { type: "row", file: "01-cover.png", alt: "Cover slide: “BrandMR — A journey toward systemic innovation,” TU Delft, June 2025.", text: "BrandMR started as a systemic design project at TU Delft: an attempt to rethink access to legal aid in the Netherlands from the ground up, presented on 18 June 2025." },
+                            { type: "row", file: "02-brief-mission.png", alt: "The brief and the mission: overcoming the fragmentation of legal aid in the Netherlands.", text: "The brief was clear: the Dutch legal aid system is fragmented, and it costs both clients who struggle to find their way and social lawyers working under difficult conditions. BrandMR's mission is to simplify that path for both, through a single point of access." }
+                        ]
+                    },
+                    {
+                        title: "The problem",
+                        blocks: [
+                            { type: "row", file: "04-stakeholder-matrix.png", alt: "Stakeholder map by interest and power: BrandMR at the centre, between Juridisch Loket, RVR, the government, small firms and individual lawyers.", text: "The first step was understanding who actually had the power to block or accelerate change. We mapped every player in the Dutch legal aid system — from Juridisch Loket to individual lawyers — on an interest/power matrix, to decide who to partner with first." },
+                            { type: "row", file: "06-issue-tree.png", alt: "Issue tree: the fragmentation of the ecosystem breaks down into siloed operations and impacts on clients and lawyers.", text: "To avoid stopping at symptoms, we built an issue tree starting from the root cause — the operational fragmentation of the ecosystem — to trace how it cascades downstream: first into the client experience, then into lawyers' day-to-day work." },
+                            { type: "row", file: "07-customer-journey-ora.png", alt: "The current customer journey: a poorly coordinated path across different touchpoints.", text: "Mapping the current customer journey made visible just how disjointed the path really is: disconnected touchpoints, inconsistent communication, and no one actually guiding the client from one end of the process to the other." },
+                            { type: "row", file: "16-dati-ore-pagate-vs-reali.png", alt: "“Social advocacy does not consist of average cases and therefore can't be generalised” — from an interview with a social lawyer.", text: "An interview with a social lawyer confirmed what the data alone couldn't tell us: “social advocacy does not consist of average cases, and therefore can't be generalised” — every case calls for judgment, not just procedure." }
+                        ]
+                    },
+                    {
+                        title: "The vision and the method",
+                        blocks: [
+                            { type: "row", file: "05-vision.png", alt: "The vision: from a fragmented ecosystem to a seamless experience, BrandMR's “one stop shop.”", text: "From there came the vision: turning a fragmented ecosystem into a seamless, integrated experience — a true one-stop shop where clients arrive with a problem and find a clear path, without having to retell their story at every step." },
+                            { type: "row", file: "03-metodo-4-fasi-sistemiche.png", alt: "The method in 4 systemic phases: opening up the system, developing empathy, structuring change, scaling it.", text: "To get there we followed a four-phase systemic design method: opening up the system and acknowledging the interrelatedness of problems, developing empathy with the whole ecosystem, structuring and embracing change, and finally scaling it systemically." }
+                        ]
+                    },
+                    {
+                        title: "The system",
+                        blocks: [
+                            { type: "row", file: "09-roadmap-completa.png", alt: "The system's AI backbone: guided intake, dynamic point allocation, outcome verification, feedback loop, alignment with lawyers.", text: "At the core of the solution is an AI backbone that orchestrates the whole service: it guides the intake of new cases, dynamically allocates priority points, verifies outcomes, and keeps client and lawyer aligned in a single continuous learning loop." },
+                            { type: "row", file: "17-quote-avvocato.png", alt: "A dynamic point allocation system: twelve factors to fairly estimate a case's workload.", text: "To make social lawyers' pay fair, we designed a dynamic point allocation system: twelve factors — from case complexity to impact on the client — combined into a single score instead of a flat hourly rate." },
+                            { type: "row", file: "18-dynamic-point-allocation.png", alt: "The same model applied and compared across several real cases.", text: "Applying the same model to several real cases shows exactly why it was needed: seemingly similar cases can demand very different workloads, and a flat rate ended up penalising the most complex ones." },
+                            { type: "row", file: "19-who-will-benefit.png", alt: "The future scenario: the relationship between number of cases and time spent, with a real case broken down in detail.", text: "Projecting the system forward, the curve shows how caseload would be distributed against hours actually invested — with a real termination case detailed alongside it, to show the model holds up even at the edge cases." }
+                        ]
+                    },
+                    {
+                        title: "The experience",
+                        blocks: [
+                            { type: "row", file: "08-customer-journey-one-stop-shop.png", alt: "The AI-generated report: case analysis, expected timeline, next steps.", text: "On the client side, the platform generates a case report that's readable and concrete: an analysis of the legal context, a realistic timeline of expected phases, and the next steps to take — everything that used to require a phone call." },
+                            { type: "row", file: "11-ui-income-check.png", alt: "The lawyer's dashboard: active clients, messages, pending requests, recent activity.", text: "On the lawyer's side, a dashboard brings active clients, unread messages, pending requests and recent activity into a single view — the goal is to take time away from admin and give it back to the case." }
+                        ]
+                    },
+                    {
+                        title: "Scaling the system",
+                        blocks: [
+                            { type: "row", file: "12-ui-lawyer-dashboard.png", alt: "The three-phase roadmap: structuring, embracing and scaling change.", text: "Rolling it out follows the same phases as the method, turned into a concrete roadmap: first structure the change, then embed it at the organisational level, then scale it beyond its initial footprint." },
+                            { type: "row", file: "13-brand-architecture-3-opzioni.png", alt: "The launch campaign: “Legal help shouldn't be a luxury,” with a QR code to check eligibility for the service.", text: "The brand launch starts with a simple, direct message taken to the street: “legal help shouldn't be a luxury,” with a QR code that lets people check in seconds whether they're eligible for the service." },
+                            { type: "row", file: "14-seo-strategy-table.png", alt: "The online platform: a homepage for describing your case and accessing the service.", text: "The platform's homepage turns that promise into a concrete first step: describe your case in a few lines, guided by an explainer video, and enter the system without already knowing who to turn to." }
+                        ]
+                    },
+                    {
+                        title: "Recap",
+                        blocks: [
+                            { type: "row", file: "20-roadmap-sistemica-finale.png", alt: "System recap, from the single case to the scale of the whole ecosystem.", text: "The final recap sums up the system the same way it was built: not one monolithic solution, but a set of interventions at different scales, all anchored to BrandMR as the coordinating point." }
+                        ]
+                    }
+                ]
+            },
+            "telefono-terminale": {
+                basePath: "Immagini/Portfolio images/02 Telefono Terminale/",
+                sections: [
+                    {
+                        title: "Hook",
+                        blocks: [
+                            { type: "row", file: "01-cover-identita.png", alt: "Project identity: “Telefono Terminale,” bachelor's thesis.", text: "Telefono Terminale is my bachelor's thesis project: a minimal communication device meant to question how we use our smartphones every day." }
+                        ]
+                    },
+                    {
+                        title: "The concept",
+                        blocks: [
+                            { type: "row", file: "02-concept-sketches.png", alt: "Exploratory sketches: shapes, interchangeable modules, references to Fairphone and Rabbit.", text: "The formal research started with a series of exploratory sketches: more or less aggressive shapes, a modular-system hypothesis inspired by Fairphone, direct references like the Rabbit r1 and Android — a quick way to figure out what the device shouldn't be." },
+                            { type: "row", file: "03-moodboard.png", alt: "Moodboard: CB radios, construction vehicles, an exoskeleton — a raw, rugged language.", text: "The moodboard deliberately pulls in raw, non-consumer references: CB radios, construction vehicles, an industrial exoskeleton — objects meant to be used, not to entertain, the language I wanted for the device." }
+                        ]
+                    },
+                    {
+                        title: "The design",
+                        blocks: [
+                            { type: "row", file: "04-render-hero-fronte-retro.png", alt: "Final render, front and back: a minimal screen up front, diagonal black/white stripes on the back.", text: "The final render sets the formal direction: an essential screen on the front, and on the back the diagonal black-and-white stripes that become the product's signature — recognisable at a glance." },
+                            { type: "row", file: "05-exploded-render.png", alt: "Exploded view of the shell: panels and structure separated along the assembly axis.", text: "The exploded view of the shell shows how the panels separate along the assembly axis: a structure meant to be opened and repaired, not sealed shut for good." },
+                            { type: "row", file: "06-exploded-componenti-labels.png", alt: "Exploded view with labels: PCB, battery, camera module, speaker, OLED screen, Gorilla Glass.", text: "Labelling every internal component — PCB, battery, camera module, speaker, OLED screen, Gorilla Glass — moves the project from form to engineering: what it actually takes to make a device this stripped-down work." },
+                            { type: "row", file: "07-disegno-tecnico-quotato.png", alt: "Dimensioned technical drawing: 4.0 × 9.0 cm, 0.7 cm thick.", text: "The dimensioned technical drawing — 4.0 × 9.0 cm, 0.7 cm thick — translates formal intent into real tolerances, the mandatory step before a physical prototype could be printed." }
+                        ]
+                    },
+                    {
+                        title: "The interaction",
+                        blocks: [
+                            { type: "row", file: "08-ui-storyboard-assistente-lam.png", alt: "Interface storyboard: lock screen, voice assistant, messages, main menu.", text: "Without a traditional touchscreen to fill with apps, interaction shifts to voice: a storyboard walks through the lock screen, the LAM voice assistant, confirming a sent message, and a menu stripped down to the essentials." }
+                        ]
+                    },
+                    {
+                        title: "The prototype",
+                        blocks: [
+                            { type: "row", file: "09-modello-fisico-in-mano.png", alt: "The 3D-printed physical model, front and back, held in hand.", text: "The first physical model, 3D-printed, exists to answer a question no render can: how it actually feels in the hand, front and back, at real scale." }
+                        ]
+                    },
+                    {
+                        title: "In real life",
+                        blocks: [
+                            { type: "row", file: "10-uso-musica-e-qr.png", alt: "In use: playing music and a QR code screen for public transport.", text: "In everyday use the device still handles the simple things: playing music, showing a QR code for public transport — minimal functionality, but enough not to isolate whoever uses it." },
+                            { type: "row", file: "11-uso-chiamata-e-assistente-vocale.png", alt: "In use: a phone call and activating the voice assistant.", text: "In two distinct moments of use — a call held to the ear, the voice assistant activated close to the mouth — you can see the same object change function without changing shape." },
+                            { type: "row", file: "12-uso-cuffie-e-tasca.png", alt: "In use: listening with headphones and its real footprint in a pocket.", text: "Listening with headphones and its real footprint in a pocket close the loop of everyday use situations: the device was meant to disappear into the routine, not add one more thing to manage." },
+                            { type: "row", file: "13-ergonomia-grip-sequence.png", alt: "Ergonomic sequence: how the hand reaches the touchscreen.", text: "A sequence of shots of the same hand, at four different angles, tested whether the thumb could comfortably reach the touchscreen in every real grip — an empirical ergonomics test before the prototype was even finished." }
+                        ]
+                    },
+                    {
+                        title: "Why it works",
+                        blocks: [
+                            { type: "row", file: "14-mappa-posizionamento-mercato.png", alt: "Positioning map: from smartphones to dumbphones, from wearables to brain-computer interfaces.", text: "Positioning the project against smartphones, dumbphones like the Light Phone, wearables, voice assistants and even brain-computer interfaces reveals the empty space Telefono Terminale tries to occupy: between too much and too little." },
+                            { type: "row", file: "15-personas-empathy-map.png", alt: "Empathy maps for the two reference personas, Martina and Giulio.", text: "The empathy maps for Martina and Giulio, two university students, kept the project grounded in real people: what they think, say, feel and do about their — often conflicted — relationship with their smartphone." },
+                            { type: "row", file: "16-value-proposition-canvas.png", alt: "Value proposition canvas for Martina and Giulio.", text: "The value proposition canvas translates those empathies into design requirements: which pains were worth solving, which gains to create, and which features of the device actually answer a need rather than just an aesthetic." }
+                        ]
+                    }
+                ]
+            },
+        };
+
         const filterChips = document.querySelectorAll(".chip");
         const projectCards = document.querySelectorAll(".project-card");
         const projectPanel = document.getElementById("projectPanel");
         const projectClose = projectPanel ? projectPanel.querySelector(".project-close") : null;
+        const projectPanelMedia = document.getElementById("projectPanelMedia");
+        const defaultPanelMediaMarkup = projectPanelMedia ? projectPanelMedia.innerHTML : "";
         let activeCard = null;
         let isAnimating = false;
 
-        const projectPanelMedia = document.getElementById("projectPanelMedia");
-        const defaultPanelMediaMarkup = projectPanelMedia ? projectPanelMedia.innerHTML : "";
+        function renderProjectStory(container, story) {
+            container.innerHTML = "";
+            container.classList.add("project-panel-media--story");
+            let imageCount = 0;
+
+            function makeImg(file, alt) {
+                const img = document.createElement("img");
+                img.src = story.basePath + file;
+                img.alt = alt;
+                img.loading = imageCount < 2 ? "eager" : "lazy";
+                img.decoding = "async";
+                imageCount++;
+                return img;
+            }
+
+            if (story.intro) {
+                const intro = story.intro;
+                const introEl = document.createElement("div");
+                introEl.className = "panel-story-intro";
+
+                const videoWrap = document.createElement("div");
+                videoWrap.className = "panel-story-video";
+                const video = document.createElement("video");
+                video.src = story.basePath + intro.videoSrc;
+                video.poster = story.basePath + intro.poster;
+                video.controls = true;
+                video.playsInline = true;
+                video.preload = "metadata";
+                videoWrap.appendChild(video);
+                introEl.appendChild(videoWrap);
+
+                const lockup = document.createElement("div");
+                lockup.className = "panel-story-intro-lockup";
+                lockup.appendChild(makeImg(intro.logo.file, intro.logo.alt));
+                const payoff = document.createElement("p");
+                payoff.className = "panel-story-payoff";
+                payoff.textContent = intro.payoff;
+                lockup.appendChild(payoff);
+                introEl.appendChild(lockup);
+
+                container.appendChild(introEl);
+            }
+
+            story.sections.forEach(function (section) {
+                const heading = document.createElement("h4");
+                heading.className = "panel-story-heading";
+                heading.textContent = section.title;
+                container.appendChild(heading);
+
+                section.blocks.forEach(function (block) {
+                    if (block.type === "row") {
+                        const row = document.createElement("div");
+                        row.className = "panel-story-row";
+
+                        const figure = document.createElement("figure");
+                        figure.className = "panel-story-figure";
+                        figure.appendChild(makeImg(block.file, block.alt));
+                        row.appendChild(figure);
+
+                        const textBlock = document.createElement("div");
+                        textBlock.className = "panel-story-text";
+                        const paragraph = document.createElement("p");
+                        paragraph.textContent = block.text || block.alt;
+                        textBlock.appendChild(paragraph);
+                        row.appendChild(textBlock);
+
+                        container.appendChild(row);
+                    } else if (block.type === "pair") {
+                        const pair = document.createElement("div");
+                        pair.className = "panel-story-pair";
+                        block.files.forEach(function (file, i) {
+                            pair.appendChild(makeImg(file, block.alts[i]));
+                        });
+                        const caption = document.createElement("p");
+                        caption.className = "panel-story-pair-caption";
+                        caption.textContent = block.caption;
+                        pair.appendChild(caption);
+                        container.appendChild(pair);
+                    } else if (block.type === "grid") {
+                        const grid = document.createElement("div");
+                        grid.className = "panel-story-grid";
+                        block.files.forEach(function (file, i) {
+                            grid.appendChild(makeImg(file, block.alts[i]));
+                        });
+                        const caption = document.createElement("p");
+                        caption.className = "panel-story-grid-caption";
+                        caption.textContent = block.caption;
+                        grid.appendChild(caption);
+                        container.appendChild(grid);
+                    } else if (block.type === "stats") {
+                        const statsWrap = document.createElement("div");
+                        statsWrap.className = "panel-story-stats-wrap";
+                        if (block.intro) {
+                            const introP = document.createElement("p");
+                            introP.className = "panel-story-stats-intro";
+                            introP.textContent = block.intro;
+                            statsWrap.appendChild(introP);
+                        }
+                        const stats = document.createElement("div");
+                        stats.className = "panel-story-stats";
+                        block.items.forEach(function (item) {
+                            const stat = document.createElement("div");
+                            stat.className = "panel-story-stat";
+                            const value = document.createElement("span");
+                            value.className = "panel-story-stat-value";
+                            value.textContent = item.value;
+                            const label = document.createElement("span");
+                            label.className = "panel-story-stat-label";
+                            label.textContent = item.label;
+                            stat.appendChild(value);
+                            stat.appendChild(label);
+                            stats.appendChild(stat);
+                        });
+                        statsWrap.appendChild(stats);
+                        container.appendChild(statsWrap);
+                    }
+                });
+            });
+        }
 
         function updatePanelContent(card) {
             if (!projectPanel) return;
@@ -294,26 +632,26 @@
 
             if (!projectPanelMedia) return;
 
-            if (galleryKey && window.ProjectGallery) {
-                window.ProjectGallery.render(projectPanelMedia, galleryKey);
+            const story = galleryKey ? PROJECT_STORIES[galleryKey] : null;
+            if (story) {
+                projectPanel.classList.add("project-panel--story");
+                renderProjectStory(projectPanelMedia, story);
                 return;
             }
 
-            projectPanelMedia.classList.remove("project-gallery-grid");
+            projectPanel.classList.remove("project-panel--story");
+            projectPanelMedia.classList.remove("project-panel-media--story");
             projectPanelMedia.innerHTML = defaultPanelMediaMarkup;
             const panelWide = projectPanelMedia.querySelector(".panel-image--wide");
             const panelDetail = projectPanelMedia.querySelector(".panel-image:not(.panel-image--wide)");
             const wideSrc = card.dataset.panelWide;
             const detailSrc = card.dataset.panelDetail;
 
-            // NOTE: relative url() inside a CSS custom property resolves against the
-            // stylesheet that consumes it (css/style.css), not against this page —
-            // the "../" prefix compensates for that one directory level.
             if (panelWide) {
-                panelWide.style.setProperty("--panel-image", wideSrc ? `url('../${wideSrc}')` : "");
+                panelWide.style.setProperty("--panel-image", wideSrc ? `url('${wideSrc}')` : "");
             }
             if (panelDetail) {
-                panelDetail.style.setProperty("--panel-image", detailSrc ? `url('../${detailSrc}')` : "");
+                panelDetail.style.setProperty("--panel-image", detailSrc ? `url('${detailSrc}')` : "");
             }
         }
 
