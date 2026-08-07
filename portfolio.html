@@ -134,7 +134,7 @@
                 </div>
             </a>
             <a class="grid-cell product-card project-card" href="project-10.html" data-tags="photos video fashion" data-description="Editorial photography and video coverage of Lago Film Fest 2026, produced in collaboration with ID Eight, a footwear brand." data-role="Photographer / Videographer"
-                data-year="2026" data-scope="Photography / Videography / Brand collaboration">
+                data-year="2026" data-scope="Photography / Videography / Brand collaboration" data-gallery="lago-film-fest-id-eight">
                 <div class="product-image project-image">
                     <span class="project-index">10</span>
                     <span class="project-stamp">Photos / Video / Fashion</span>
@@ -587,6 +587,59 @@
                         ]
                     }
                 ]
+            },
+            "lago-film-fest-id-eight": {
+                basePath: "Immagini/Portfolio images/05 Lago Film Fest 2026 x ID Eight/",
+                dims: {
+                    "hero-boat-group.jpg": [1800, 1200],
+                    "01-panel-talk.jpg": [1328, 1800],
+                    "02-holding-sneakers.jpg": [1200, 1800],
+                    "03-staff-badge-and-sneaker.jpg": [1200, 1800],
+                    "04-lake.jpg": [1200, 1800],
+                    "05-panel-backdrop.jpg": [1200, 1800],
+                    "06-portrait-mic.jpg": [1200, 1800],
+                    "07-sneaker-on-stump.jpg": [1340, 1800],
+                    "08-seated-portrait.jpg": [1370, 1800],
+                    "09-staff-portrait.jpg": [1200, 1800],
+                    "10-crowd.jpg": [1200, 1800],
+                    "11-portrait-mic-mushroom.jpg": [1200, 1800],
+                    "12-car-trunk-portrait.jpg": [1200, 1800],
+                    "13-bench-portrait.jpg": [1200, 1800]
+                },
+                sections: [
+                    {
+                        title: "Behind the collaboration",
+                        blocks: [
+                            { type: "text", text: "Editorial photography and video coverage of Lago Film Fest 2026, shot in collaboration with ID Eight — a footwear brand seeding its collab sneaker through the festival's panels, staff and lakeside crowd." },
+                            { type: "figure", file: "hero-boat-group.jpg", alt: "Overhead shot of four festival-goers piled onto a white pedal boat on the lake." },
+                            {
+                                type: "grid",
+                                files: [
+                                    "01-panel-talk.jpg", "02-holding-sneakers.jpg", "03-staff-badge-and-sneaker.jpg",
+                                    "04-lake.jpg", "05-panel-backdrop.jpg", "06-portrait-mic.jpg",
+                                    "07-sneaker-on-stump.jpg", "08-seated-portrait.jpg", "09-staff-portrait.jpg",
+                                    "10-crowd.jpg", "11-portrait-mic-mushroom.jpg", "12-car-trunk-portrait.jpg",
+                                    "13-bench-portrait.jpg"
+                                ],
+                                alts: [
+                                    "Two people mid-conversation during a festival panel talk, microphone in hand, forest backdrop.",
+                                    "Portrait of a woman in a Lago Film Fest shirt holding a pair of ID Eight sneakers up by her face.",
+                                    "Detail shot of a Lago Film Fest staff badge next to an ID Eight sneaker held against the leg.",
+                                    "Candid lakeside shot: a festival-goer out of focus in the foreground, a pedal boat and a woman on the water behind.",
+                                    "Four people seated on a festival panel in front of colourful illustrated Lago Film Fest posters.",
+                                    "Portrait of a woman mid-answer on a festival panel, microphone in hand, festival poster behind her.",
+                                    "Close-up of an ID Eight sneaker with branded sock, one foot balanced on a tree stump.",
+                                    "Seated portrait, arms crossed over bent knees, ID Eight sneakers in the foreground, sitting on hay.",
+                                    "Full-body portrait of a Lago Film Fest staff member sitting on a hay bale, ID Eight sneakers and a branded popcorn cup in frame.",
+                                    "A row of festival-goers listening intently, seated close together under a shaded pavilion.",
+                                    "Portrait of a man speaking into a microphone on a festival panel, mushroom-illustration poster behind him.",
+                                    "Portrait of a man in a mushroom-print shirt sitting in the open trunk of a car, ID Eight sneakers visible.",
+                                    "Portrait of a woman on a park bench in a graphic t-shirt, ID Eight sneakers in the foreground."
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         };
 
@@ -702,10 +755,12 @@
                             cell.appendChild(makeImg(file, block.alts[i]));
                             pair.appendChild(cell);
                         });
-                        const caption = document.createElement("p");
-                        caption.className = "panel-story-pair-caption";
-                        caption.textContent = block.caption;
-                        pair.appendChild(caption);
+                        if (block.caption) {
+                            const caption = document.createElement("p");
+                            caption.className = "panel-story-pair-caption";
+                            caption.textContent = block.caption;
+                            pair.appendChild(caption);
+                        }
                         container.appendChild(pair);
                     } else if (block.type === "text") {
                         const textEl = document.createElement("div");
@@ -805,13 +860,18 @@
                     } else if (block.type === "grid") {
                         const grid = document.createElement("div");
                         grid.className = "panel-story-grid";
+                        if (block.columns) {
+                            grid.style.gridTemplateColumns = "repeat(" + block.columns + ", 1fr)";
+                        }
                         block.files.forEach(function (file, i) {
                             grid.appendChild(makeImg(file, block.alts[i]));
                         });
-                        const caption = document.createElement("p");
-                        caption.className = "panel-story-grid-caption";
-                        caption.textContent = block.caption;
-                        grid.appendChild(caption);
+                        if (block.caption) {
+                            const caption = document.createElement("p");
+                            caption.className = "panel-story-grid-caption";
+                            caption.textContent = block.caption;
+                            grid.appendChild(caption);
+                        }
                         container.appendChild(grid);
                     } else if (block.type === "stats") {
                         const statsWrap = document.createElement("div");
