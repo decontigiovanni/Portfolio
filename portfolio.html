@@ -260,9 +260,9 @@
             unposted90s: {
                 basePath: "Immagini/Portfolio images/03 Unposted90s/",
                 intro: {
+                    type: "video",
                     videoSrc: "intro-pitch-u90s.mp4",
                     poster: "intro-pitch-u90s-poster.jpg",
-                    logo: { file: "Artboard 1.png", alt: "Unposted90s logo." },
                     payoff: "Making second-hand the obvious choice."
                 },
                 sections: [
@@ -473,17 +473,17 @@
                 basePath: "Immagini/Portfolio images/04 Beyond Blue and Pink/",
                 dims: {
                     "02_catalyst-47-2025.png": [1250, 770],
-                    "03-stimuli-01-chainsaw.png": [915, 520],
-                    "03-stimuli-02-motorbike.png": [915, 670],
-                    "03-stimuli-03-tie.png": [915, 1150],
-                    "03-stimuli-04-car.png": [915, 670],
-                    "03-stimuli-05-towel.png": [915, 540],
-                    "03-stimuli-06-dog.png": [915, 780],
-                    "03-stimuli-07-doll.png": [830, 900],
-                    "03-stimuli-08-handbag.png": [830, 770],
-                    "03-stimuli-09-teaset.png": [830, 860],
-                    "04_culture-color-analysis.png": [1800, 9300],
-                    "05_generation-color-analysis.png": [1800, 9300],
+                    "03-stimuli-01-chainsaw.png": [876, 876],
+                    "03-stimuli-02-motorbike.png": [876, 876],
+                    "03-stimuli-03-tie.png": [876, 876],
+                    "03-stimuli-04-car.png": [876, 876],
+                    "03-stimuli-05-towel.png": [876, 876],
+                    "03-stimuli-06-dog.png": [876, 876],
+                    "03-stimuli-07-doll.png": [876, 876],
+                    "03-stimuli-08-handbag.png": [876, 876],
+                    "03-stimuli-09-teaset.png": [876, 876],
+                    "04_culture-color-analysis.png": [1800, 9250],
+                    "05_generation-color-analysis.png": [1800, 9250],
                     "06_alluvial-color-objecttype.png": [2350, 9050],
                     "07_results-hypotheses-table.png": [1540, 2050]
                 },
@@ -555,7 +555,18 @@
                             { type: "text", text: "Congruent pairings won — pink on feminine objects, blue on masculine — confirming the schemas are still alive (H1). Boomers reacted more sharply against incongruent pairings (H2); Millennials and Gen Z drifted toward flexibility, but not significantly (H3 — directional only). The sharper line was cultural: East Asian participants rated red masculine objects as more appropriate (H4), while the pink–femininity link was strongest in the West (H5)." },
                             { type: "quote", text: "The headline isn't that stereotypes persist — it's that they're anchored more by cultural frame than by generation." },
                             { type: "figure", tall: true, file: "06_alluvial-color-objecttype.png", alt: "Alluvial diagram flowing six colours into masculine, neutral and feminine object types.", caption: "Six colours flowing into masculine, neutral and feminine object types." },
-                            { type: "expand", label: "See the full results table", file: "07_results-hypotheses-table.png", alt: "Results table summarising hypotheses H1–H5 with estimates, p-values and null-hypothesis decisions." }
+                            {
+                                type: "table",
+                                columns: ["Hypothesis", "Key estimates", "p-value", "Interpretation", "Decision"],
+                                rows: [
+                                    ["H1", "Pink–feminine: −1.773 / Blue–masculine: −1.497", ".021 / .051", "Supported", "Rejected (H₀₁)"],
+                                    ["H2", "Boomers main effect: −1.493", "≈ .013", "Supported", "Rejected (H₀₂)"],
+                                    ["H3", "Millennials/Gen Z: ≈ 0", "> .05", "Directional only", "Not rejected (H₀₃)"],
+                                    ["H4", "East Asian × red-masculine: positive", "< .05", "Supported", "Rejected (H₀₄)"],
+                                    ["H5", "Western pink-feminine: positive vs. East Asian", "< .05", "Supported", "Rejected (H₀₅)"]
+                                ],
+                                caption: "Strong support for H1, H2, H4 and H5 — the traditional colour schemas hold, especially in Western and older groups. H3 trends toward flexibility in younger cohorts but doesn't reach significance. Cultural effects (H4, H5) are more pronounced than generational ones (H2, H3)."
+                            }
                         ]
                     },
                     {
@@ -620,13 +631,15 @@
                 video.poster = story.basePath + intro.poster;
                 video.controls = true;
                 video.playsInline = true;
-                video.preload = "metadata";
+                video.preload = "auto";
+                video.muted = true;
+                video.autoplay = true;
                 videoWrap.appendChild(video);
                 introEl.appendChild(videoWrap);
+                video.play().catch(function () {});
 
                 const lockup = document.createElement("div");
                 lockup.className = "panel-story-intro-lockup";
-                lockup.appendChild(makeImg(intro.logo.file, intro.logo.alt));
                 const payoff = document.createElement("p");
                 payoff.className = "panel-story-payoff";
                 payoff.textContent = intro.payoff;
@@ -739,6 +752,43 @@
                         wrap.appendChild(makeImg(block.file, block.alt));
                         details.appendChild(wrap);
                         container.appendChild(details);
+                    } else if (block.type === "table") {
+                        const wrap = document.createElement("div");
+                        wrap.className = "panel-story-table-wrap";
+                        const table = document.createElement("table");
+                        table.className = "panel-story-table";
+
+                        const thead = document.createElement("thead");
+                        const headRow = document.createElement("tr");
+                        block.columns.forEach(function (col) {
+                            const th = document.createElement("th");
+                            th.textContent = col;
+                            headRow.appendChild(th);
+                        });
+                        thead.appendChild(headRow);
+                        table.appendChild(thead);
+
+                        const tbody = document.createElement("tbody");
+                        block.rows.forEach(function (row) {
+                            const tr = document.createElement("tr");
+                            row.forEach(function (cell) {
+                                const td = document.createElement("td");
+                                td.textContent = cell;
+                                tr.appendChild(td);
+                            });
+                            tbody.appendChild(tr);
+                        });
+                        table.appendChild(tbody);
+
+                        wrap.appendChild(table);
+                        container.appendChild(wrap);
+
+                        if (block.caption) {
+                            const caption = document.createElement("p");
+                            caption.className = "panel-story-figure-full-caption";
+                            caption.textContent = block.caption;
+                            container.appendChild(caption);
+                        }
                     } else if (block.type === "credits") {
                         const credits = document.createElement("div");
                         credits.className = "panel-story-credits";
