@@ -580,9 +580,11 @@
                         blocks: [
                             {
                                 type: "credits",
-                                role: "Study design and statistical analysis (experimental design, SPSS, linear mixed-effects model).",
-                                team: ["Grigoris Bodiotis", "Giovanni De Conti", "Yutong Luo", "Menno Poorthuis"],
-                                context: "IDEM220 — \"When Images Remain\", 2025. Poster and information design as the group's synthesis deliverable."
+                                items: [
+                                    { label: "My role", value: "Study design and statistical analysis (experimental design, SPSS, linear mixed-effects model)." },
+                                    { label: "Team", value: "Grigoris Bodiotis · Giovanni De Conti · Yutong Luo · Menno Poorthuis" },
+                                    { label: "Context", value: "IDEM220 — \"When Images Remain\", 2025. Poster and information design as the group's synthesis deliverable." }
+                                ]
                             }
                         ]
                     }
@@ -592,14 +594,14 @@
                 basePath: "Immagini/Portfolio images/05 Lago Film Fest 2026 x ID Eight/",
                 dims: {
                     "hero-boat-group.jpg": [1800, 1200],
-                    "01-panel-talk.jpg": [1328, 1800],
+                    "01-panel-talk.jpg": [1200, 1800],
                     "02-holding-sneakers.jpg": [1200, 1800],
                     "03-staff-badge-and-sneaker.jpg": [1200, 1800],
                     "04-lake.jpg": [1200, 1800],
                     "05-panel-backdrop.jpg": [1200, 1800],
                     "06-portrait-mic.jpg": [1200, 1800],
-                    "07-sneaker-on-stump.jpg": [1340, 1800],
-                    "08-seated-portrait.jpg": [1370, 1800],
+                    "07-sneaker-on-stump.jpg": [1200, 1800],
+                    "08-seated-portrait.jpg": [1200, 1800],
                     "09-staff-portrait.jpg": [1200, 1800],
                     "10-crowd.jpg": [1200, 1800],
                     "11-portrait-mic-mushroom.jpg": [1200, 1800],
@@ -635,6 +637,20 @@
                                     "Portrait of a man speaking into a microphone on a festival panel, mushroom-illustration poster behind him.",
                                     "Portrait of a man in a mushroom-print shirt sitting in the open trunk of a car, ID Eight sneakers visible.",
                                     "Portrait of a woman on a park bench in a graphic t-shirt, ID Eight sneakers in the foreground."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: "Credits",
+                        blocks: [
+                            {
+                                type: "credits",
+                                items: [
+                                    { label: "Camera", value: "Fujifilm X-T3" },
+                                    { label: "Lens", value: "Fujinon XF 18-55mm F2.8-4 R LM OIS" },
+                                    { label: "Location", value: "Lago Film Fest 2026, Revine Lago (TV)" },
+                                    { label: "Approach", value: "Natural light, documentary approach — candid festival moments alongside a few styled product shots for the ID Eight sneaker collab, no constructed poses." }
                                 ]
                             }
                         ]
@@ -847,15 +863,14 @@
                     } else if (block.type === "credits") {
                         const credits = document.createElement("div");
                         credits.className = "panel-story-credits";
-                        const role = document.createElement("p");
-                        role.innerHTML = "<strong>My role:</strong> " + block.role;
-                        credits.appendChild(role);
-                        const team = document.createElement("p");
-                        team.innerHTML = "<strong>Team:</strong> " + block.team.join(" · ");
-                        credits.appendChild(team);
-                        const context = document.createElement("p");
-                        context.innerHTML = "<strong>Context:</strong> " + block.context;
-                        credits.appendChild(context);
+                        block.items.forEach(function (item) {
+                            const p = document.createElement("p");
+                            const strong = document.createElement("strong");
+                            strong.textContent = item.label + ":";
+                            p.appendChild(strong);
+                            p.appendChild(document.createTextNode(" " + item.value));
+                            credits.appendChild(p);
+                        });
                         container.appendChild(credits);
                     } else if (block.type === "grid") {
                         const grid = document.createElement("div");
