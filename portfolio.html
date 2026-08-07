@@ -78,9 +78,9 @@
                     <span class="product-price">Strategic design for responsible BCI futures</span>
                 </div>
             </a>
-            <a class="grid-cell product-card project-card" href="project-05.html" data-tags="fashion visual" data-description="Self-initiated fashion project exploring visual identity and early e-commerce distribution through Instagram." data-role="Creator / Designer"
-                data-year="2019–2021" data-scope="Fashion design / Visual identity / Social media">
-                <div class="product-image project-image">
+            <a class="grid-cell product-card project-card" href="project-05.html" data-tags="fashion visual video" data-description="An independent fashion project told through two collections: Arcadia Inkoerente (2019) and Arcadia Frame (2021)." data-role="Creator / Designer"
+                data-year="2019–2021" data-scope="Fashion design / Art direction / Visual identity / Social media" data-gallery="arcadia-project">
+                <div class="product-image project-image" style="--project-image: url('Immagini/Portfolio images/06 arcadia project/1. arcadia inkoerente/File_000.jpeg');">
                     <span class="project-index">05</span>
                     <span class="project-stamp">Fashion / Visual</span>
                 </div>
@@ -415,56 +415,117 @@
             },
             "telefono-terminale": {
                 basePath: "Immagini/Portfolio images/02 Telefono Terminale/",
+                theme: "terminal",
+                intro: {
+                    type: "summary",
+                    items: [
+                        { label: "Challenge", text: "How can a phone support everyday life without turning every pause into an invitation to scroll?" },
+                        { label: "Design move", text: "Strip the device back to intentional communication, then make every remaining interaction tangible and clear." },
+                        { label: "Outcome", text: "A bachelor's thesis developed from research and technical definition to a 3D-printed physical prototype." }
+                    ]
+                },
                 sections: [
                     {
-                        title: "Hook",
+                        title: "A phone with less pull",
                         blocks: [
-                            { type: "row", file: "01-cover-identita.png", alt: "Project identity: “Telefono Terminale,” bachelor's thesis.", text: "Telefono Terminale is my bachelor's thesis project: a minimal communication device meant to question how we use our smartphones every day." }
+                            { type: "quote", text: "Not a phone that does everything — a phone that makes room for what matters." },
+                            {
+                                type: "pair",
+                                variant: "terminal-hero",
+                                files: ["01-cover-identita.png", "04-render-hero-fronte-retro.png"],
+                                alts: [
+                                    "Telefono Terminale project identity.",
+                                    "Final render of Telefono Terminale, front and back."
+                                ],
+                                caption: "Telefono Terminale is a bachelor's thesis project that reconsiders the smartphone as a focused communication object. The device keeps the essentials — calls, messages, music, directions and documents — while deliberately leaving out the mechanics that compete for attention."
+                            }
                         ]
                     },
                     {
-                        title: "The concept",
+                        title: "Find a language that resists consumption",
                         blocks: [
-                            { type: "row", file: "02-concept-sketches.png", alt: "Exploratory sketches: shapes, interchangeable modules, references to Fairphone and Rabbit.", text: "The formal research started with a series of exploratory sketches: more or less aggressive shapes, a modular-system hypothesis inspired by Fairphone, direct references like the Rabbit r1 and Android — a quick way to figure out what the device shouldn't be." },
-                            { type: "row", file: "03-moodboard.png", alt: "Moodboard: CB radios, construction vehicles, an exoskeleton — a raw, rugged language.", text: "The moodboard deliberately pulls in raw, non-consumer references: CB radios, construction vehicles, an industrial exoskeleton — objects meant to be used, not to entertain, the language I wanted for the device." }
+                            { type: "text", text: "The form exploration began by looking away from polished consumer electronics. Sketches tested compact proportions, modular construction and a physical language closer to radios, work vehicles and tools: objects designed to be used rather than endlessly upgraded." },
+                            {
+                                type: "pair",
+                                files: ["02-concept-sketches.png", "03-moodboard.png"],
+                                alts: [
+                                    "Exploratory sketches for Telefono Terminale.",
+                                    "Moodboard of rugged, utilitarian references for Telefono Terminale."
+                                ],
+                                caption: "Early sketches and references establish the project's direction: compact, direct and deliberately non-spectacular."
+                            }
                         ]
                     },
                     {
-                        title: "The design",
+                        title: "Make the object legible",
                         blocks: [
-                            { type: "row", file: "04-render-hero-fronte-retro.png", alt: "Final render, front and back: a minimal screen up front, diagonal black/white stripes on the back.", text: "The final render sets the formal direction: an essential screen on the front, and on the back the diagonal black-and-white stripes that become the product's signature — recognisable at a glance." },
-                            { type: "row", file: "05-exploded-render.png", alt: "Exploded view of the shell: panels and structure separated along the assembly axis.", text: "The exploded view of the shell shows how the panels separate along the assembly axis: a structure meant to be opened and repaired, not sealed shut for good." },
-                            { type: "row", file: "06-exploded-componenti-labels.png", alt: "Exploded view with labels: PCB, battery, camera module, speaker, OLED screen, Gorilla Glass.", text: "Labelling every internal component — PCB, battery, camera module, speaker, OLED screen, Gorilla Glass — moves the project from form to engineering: what it actually takes to make a device this stripped-down work." },
-                            { type: "row", file: "07-disegno-tecnico-quotato.png", alt: "Dimensioned technical drawing: 4.0 × 9.0 cm, 0.7 cm thick.", text: "The dimensioned technical drawing — 4.0 × 9.0 cm, 0.7 cm thick — translates formal intent into real tolerances, the mandatory step before a physical prototype could be printed." }
+                            {
+                                type: "pair",
+                                files: ["05-exploded-render.png", "06-exploded-componenti-labels.png"],
+                                alts: [
+                                    "Exploded render of the Telefono Terminale enclosure.",
+                                    "Labelled exploded view of Telefono Terminale components."
+                                ],
+                                caption: "The form is resolved as a buildable system. Separating the enclosure, screen, battery, speaker, camera and electronics turns a visual proposition into a device with a clear internal logic."
+                            },
+                            {
+                                type: "row",
+                                file: "07-disegno-tecnico-quotato.png",
+                                alt: "Dimensioned technical drawing of Telefono Terminale.",
+                                text: "The technical drawing translates the concept into real scale: 4 × 9 cm and 0.7 cm thick. It fixes the proportions, component placement and tolerances needed to take the design into prototyping."
+                            }
                         ]
                     },
                     {
-                        title: "The interaction",
+                        title: "Keep the interface quiet",
                         blocks: [
-                            { type: "row", file: "08-ui-storyboard-assistente-lam.png", alt: "Interface storyboard: lock screen, voice assistant, messages, main menu.", text: "Without a traditional touchscreen to fill with apps, interaction shifts to voice: a storyboard walks through the lock screen, the LAM voice assistant, confirming a sent message, and a menu stripped down to the essentials." }
+                            { type: "quote", text: "Every screen has one job. Every action has a clear next step." },
+                            { type: "row", file: "08-ui-storyboard-assistente-lam.png", alt: "Storyboard of the Telefono Terminale interface: lock screen, voice assistant, messages and main menu.", text: "With no app-filled home screen competing for attention, interaction is reduced to a small set of moments: checking the time, sending a message, using the voice assistant and navigating essential tools. The interface is designed to end the interaction, not prolong it." }
                         ]
                     },
                     {
-                        title: "The prototype",
+                        title: "Prove it in the hand",
                         blocks: [
-                            { type: "row", file: "09-modello-fisico-in-mano.png", alt: "The 3D-printed physical model, front and back, held in hand.", text: "The first physical model, 3D-printed, exists to answer a question no render can: how it actually feels in the hand, front and back, at real scale." }
+                            {
+                                type: "pair",
+                                files: ["09-modello-fisico-in-mano.png", "13-ergonomia-grip-sequence.png"],
+                                alts: [
+                                    "3D-printed Telefono Terminale prototype held in the hand.",
+                                    "Grip sequence testing access to the Telefono Terminale touchscreen."
+                                ],
+                                caption: "The 3D-printed model turns the device from an image into a scale object. It makes the two questions that renders cannot answer testable: how it sits in the hand and how naturally the thumb reaches the screen."
+                            },
+                            {
+                                type: "grid",
+                                files: ["10-uso-musica-e-qr.png", "11-uso-chiamata-e-assistente-vocale.png", "12-uso-cuffie-e-tasca.png"],
+                                alts: [
+                                    "Telefono Terminale used for music and a public-transport QR code.",
+                                    "Telefono Terminale used for a call and voice assistant interaction.",
+                                    "Telefono Terminale used with headphones and carried in a pocket."
+                                ],
+                                caption: "The device still supports the everyday moments that matter: music, tickets, calls, voice interaction and a pocket-sized physical footprint."
+                            }
                         ]
                     },
                     {
-                        title: "In real life",
+                        title: "Design for a real gap",
                         blocks: [
-                            { type: "row", file: "10-uso-musica-e-qr.png", alt: "In use: playing music and a QR code screen for public transport.", text: "In everyday use the device still handles the simple things: playing music, showing a QR code for public transport — minimal functionality, but enough not to isolate whoever uses it." },
-                            { type: "row", file: "11-uso-chiamata-e-assistente-vocale.png", alt: "In use: a phone call and activating the voice assistant.", text: "In two distinct moments of use — a call held to the ear, the voice assistant activated close to the mouth — you can see the same object change function without changing shape." },
-                            { type: "row", file: "12-uso-cuffie-e-tasca.png", alt: "In use: listening with headphones and its real footprint in a pocket.", text: "Listening with headphones and its real footprint in a pocket close the loop of everyday use situations: the device was meant to disappear into the routine, not add one more thing to manage." },
-                            { type: "row", file: "13-ergonomia-grip-sequence.png", alt: "Ergonomic sequence: how the hand reaches the touchscreen.", text: "A sequence of shots of the same hand, at four different angles, tested whether the thumb could comfortably reach the touchscreen in every real grip — an empirical ergonomics test before the prototype was even finished." }
-                        ]
-                    },
-                    {
-                        title: "Why it works",
-                        blocks: [
-                            { type: "row", file: "14-mappa-posizionamento-mercato.png", alt: "Positioning map: from smartphones to dumbphones, from wearables to brain-computer interfaces.", text: "Positioning the project against smartphones, dumbphones like the Light Phone, wearables, voice assistants and even brain-computer interfaces reveals the empty space Telefono Terminale tries to occupy: between too much and too little." },
-                            { type: "row", file: "15-personas-empathy-map.png", alt: "Empathy maps for the two reference personas, Martina and Giulio.", text: "The empathy maps for Martina and Giulio, two university students, kept the project grounded in real people: what they think, say, feel and do about their — often conflicted — relationship with their smartphone." },
-                            { type: "row", file: "16-value-proposition-canvas.png", alt: "Value proposition canvas for Martina and Giulio.", text: "The value proposition canvas translates those empathies into design requirements: which pains were worth solving, which gains to create, and which features of the device actually answer a need rather than just an aesthetic." }
+                            { type: "text", text: "Telefono Terminale is not positioned as a rejection of technology. It occupies the space between a feature-heavy smartphone and a device that removes too much: a communication tool for people who want to stay reachable without being constantly pulled back into their screen." },
+                            {
+                                type: "pair",
+                                files: ["14-mappa-posizionamento-mercato.png", "15-personas-empathy-map.png"],
+                                alts: [
+                                    "Market positioning map for Telefono Terminale.",
+                                    "Empathy maps for the Telefono Terminale reference users."
+                                ],
+                                caption: "The positioning map identifies the opportunity; the empathy maps keep it grounded in the routines, tensions and needs of two student users."
+                            },
+                            {
+                                type: "row",
+                                file: "16-value-proposition-canvas.png",
+                                alt: "Value proposition canvases for Telefono Terminale reference users.",
+                                text: "The value proposition canvas turns those insights into a design filter: protect attention without compromising useful daily functions. Every feature has to earn its place."
+                            }
                         ]
                     }
                 ]
@@ -657,6 +718,134 @@
                     }
                 ]
             }
+            ,
+            "arcadia-project": {
+                basePath: "Immagini/Portfolio images/06 arcadia project/",
+                intro: {
+                    type: "youtube",
+                    videoId: "Ar2artgE210",
+                    title: "Arcadia Project — video introduttivo"
+                },
+                sections: [
+                    {
+                        title: "Arcadia Project",
+                        blocks: [
+                            {
+                                type: "text",
+                                text: "Arcadia Project is an independent fashion project developed in two chapters. Arcadia Inkoerente (2019) and Arcadia Frame (2021) trace its evolution through garments, lookbooks and editorial imagery."
+                            }
+                        ]
+                    },
+                    {
+                        title: "2019 — Arcadia Inkoerente",
+                        blocks: [
+                            {
+                                type: "text",
+                                heading: "Lookbook",
+                                text: "The first collection is introduced through a lookbook set between the lake and a temporary studio. Each image focuses on the garments, their cut and their graphic details."
+                            },
+                            {
+                                type: "grid",
+                                columns: 3,
+                                files: [
+                                    "1. arcadia inkoerente/File_000.jpeg",
+                                    "1. arcadia inkoerente/File_002.jpeg",
+                                    "1. arcadia inkoerente/File_003.jpeg",
+                                    "1. arcadia inkoerente/fisheye sfondo bianco bianca.png",
+                                    "1. arcadia inkoerente/fisheye sfondo bianco blu.png",
+                                    "1. arcadia inkoerente/fisheye sfondo bianco rossa.png"
+                                ],
+                                alts: [
+                                    "Arcadia Inkoerente lookbook, 2019.",
+                                    "Arcadia Inkoerente lookbook, 2019.",
+                                    "Arcadia Inkoerente lookbook, 2019.",
+                                    "Arcadia Inkoerente lookbook, 2019.",
+                                    "Arcadia Inkoerente lookbook, 2019.",
+                                    "Arcadia Inkoerente lookbook, 2019."
+                                ]
+                            },
+                            {
+                                type: "text",
+                                heading: "Store photography",
+                                text: "The second set turns the lookbook into product-led imagery for the store, moving from full looks to individual garments and their details."
+                            },
+                            {
+                                type: "grid",
+                                columns: 3,
+                                files: [
+                                    "1. arcadia inkoerente/insta 1.jpg",
+                                    "1. arcadia inkoerente/insta 2.jpg",
+                                    "1. arcadia inkoerente/insta 3.jpg",
+                                    "1. arcadia inkoerente/insta-4.jpg",
+                                    "1. arcadia inkoerente/insta-5.jpg",
+                                    "1. arcadia inkoerente/insta-6.jpg"
+                                ],
+                                alts: [
+                                    "Arcadia Inkoerente store image, 2019.",
+                                    "Arcadia Inkoerente store image, 2019.",
+                                    "Arcadia Inkoerente store image, 2019.",
+                                    "Arcadia Inkoerente store image, 2019.",
+                                    "Arcadia Inkoerente store image, 2019.",
+                                    "Arcadia Inkoerente store image, 2019."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: "2021 — Arcadia Frame",
+                        blocks: [
+                            {
+                                type: "text",
+                                text: "In 2021, Arcadia Frame moves the collection out of the studio. The campaign frames the looks through architecture, street and landscape, keeping the garment, the figure and the setting on the same plane."
+                            },
+                            {
+                                type: "grid",
+                                columns: 3,
+                                files: [
+                                    "2. arcadia frame/DSCF7053.JPG",
+                                    "2. arcadia frame/DSCF7069.JPG",
+                                    "2. arcadia frame/DSCF7087.JPG",
+                                    "2. arcadia frame/DSCF7129.JPG",
+                                    "2. arcadia frame/DSCF7145.JPG",
+                                    "2. arcadia frame/DSCF7159.JPG",
+                                    "2. arcadia frame/DSCF7174.JPG",
+                                    "2. arcadia frame/DSCF7204.JPG"
+                                ],
+                                alts: [
+                                    "Arcadia Frame campaign image, 2021.",
+                                    "Arcadia Frame campaign image, 2021.",
+                                    "Arcadia Frame campaign image, 2021.",
+                                    "Arcadia Frame campaign image, 2021.",
+                                    "Arcadia Frame campaign image, 2021.",
+                                    "Arcadia Frame campaign image, 2021.",
+                                    "Arcadia Frame campaign image, 2021.",
+                                    "Arcadia Frame campaign image, 2021."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: "Social media strategy",
+                        blocks: [
+                            {
+                                type: "text",
+                                text: "The release was supported by an Instagram story sequence that introduced the Arcadia Frame tee before launch and translated product information, including the size guide, into the collection's visual language."
+                            },
+                            {
+                                type: "pair",
+                                files: [
+                                    "2. arcadia frame/A0429613-8708-4285-B4C9-9E9EE4F43863.JPG",
+                                    "2. arcadia frame/F9683154-4486-41DA-B329-94A7A7366117.JPG"
+                                ],
+                                alts: [
+                                    "Arcadia Frame Instagram story countdown.",
+                                    "Arcadia Frame Instagram story size guide."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
         };
 
         const filterChips = document.querySelectorAll(".chip");
@@ -714,6 +903,23 @@
                 payoff.textContent = intro.payoff;
                 lockup.appendChild(payoff);
                 introEl.appendChild(lockup);
+
+                container.appendChild(introEl);
+            } else if (story.intro && story.intro.type === "youtube") {
+                const intro = story.intro;
+                const introEl = document.createElement("div");
+                introEl.className = "panel-story-intro";
+
+                const videoWrap = document.createElement("div");
+                videoWrap.className = "panel-story-video panel-story-video--youtube";
+                const iframe = document.createElement("iframe");
+                iframe.src = "https://www.youtube-nocookie.com/embed/" + intro.videoId + "?autoplay=1&mute=1&loop=1&playlist=" + intro.videoId + "&playsinline=1&rel=0&modestbranding=1";
+                iframe.title = intro.title;
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                iframe.referrerPolicy = "strict-origin-when-cross-origin";
+                iframe.allowFullscreen = true;
+                videoWrap.appendChild(iframe);
+                introEl.appendChild(videoWrap);
 
                 container.appendChild(introEl);
             } else if (story.intro && story.intro.type === "summary") {
@@ -954,11 +1160,13 @@
             const story = galleryKey ? PROJECT_STORIES[galleryKey] : null;
             if (story) {
                 projectPanel.classList.add("project-panel--story");
+                projectPanel.classList.toggle("project-panel--terminal", story.theme === "terminal");
                 renderProjectStory(projectPanelMedia, story);
                 return;
             }
 
             projectPanel.classList.remove("project-panel--story");
+            projectPanel.classList.remove("project-panel--terminal");
             projectPanelMedia.classList.remove("project-panel-media--story");
             projectPanelMedia.innerHTML = defaultPanelMediaMarkup;
             const panelWide = projectPanelMedia.querySelector(".panel-image--wide");

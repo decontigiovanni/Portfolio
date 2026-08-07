@@ -1113,6 +1113,17 @@ body.store-page {
     height: auto;
 }
 
+.panel-story-video--youtube {
+    aspect-ratio: 16 / 9;
+}
+
+.panel-story-video--youtube iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 .panel-story-intro-lockup {
     display: flex;
     flex-direction: column;
