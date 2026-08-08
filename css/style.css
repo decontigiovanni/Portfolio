@@ -748,8 +748,8 @@ body.store-page {
     transform: translateY(0);
 }
 
-.product-card:hover .product-image,
-.product-card:focus-visible .product-image {
+.product-card:not(.project-card):hover .product-image,
+.product-card:not(.project-card):focus-visible .product-image {
     background: linear-gradient(145deg, #2f2f2f 0%, #121212 100%);
 }
 
@@ -786,7 +786,7 @@ body.store-page {
         opacity: 0;
         transform: translateY(8px);
     }
-    .product-card:hover .product-image {
+    .product-card:not(.project-card):hover .product-image {
         background: #2b2b2b;
     }
     .product-card:hover .product-image img {
