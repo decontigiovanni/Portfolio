@@ -864,10 +864,6 @@ body.store-page {
     margin: 8px -24px 0 -24px;
 }
 
-.portfolio-header .line-header--filters {
-    margin: 10px -24px 10px -24px;
-}
-
 .portfolio-heading-row {
     display: flex;
     align-items: flex-end;
@@ -876,70 +872,28 @@ body.store-page {
     flex-wrap: wrap;
 }
 
-.portfolio-filter-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 12px;
-}
-
-.portfolio-filter-label {
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.65;
-}
-
-.portfolio-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.chip {
-    font-family: "PPNeue";
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 6px 14px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    background: transparent;
-    color: var(--color-text);
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-    cursor: pointer;
-}
-
-.chip:hover,
-.chip:focus-visible {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-    transform: translateY(-1px);
-}
-
-.chip:focus-visible {
-    outline: 1px solid var(--color-primary);
-    outline-offset: 2px;
-}
-
-.chip.is-active {
-    background: var(--color-primary);
-    color: var(--color-bg);
-    border-color: var(--color-primary);
-}
-
-.chip.is-active:hover,
-.chip.is-active:focus-visible {
-    color: var(--color-bg);
-}
-
 .portfolio-main {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-bottom: 70px;
     margin-top: 10px;
+}
+
+.portfolio-section {
+    scroll-margin-top: 120px;
+}
+
+.portfolio-section + .portfolio-section {
+    margin-top: 56px;
+}
+
+.portfolio-section-title {
+    margin: 0 0 4px;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.65;
 }
 
 .portfolio-grid {
@@ -952,10 +906,6 @@ body.store-page {
 
 .project-card {
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.project-card.is-hidden {
-    display: none;
 }
 
 .project-card.is-expanded {
@@ -1154,6 +1104,21 @@ body.store-page {
 
 .panel-story-pair {
     grid-template-columns: 1fr 1fr;
+}
+
+.panel-story-pair-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-story-pair-text {
+    flex: 1;
+    margin: 0;
+    padding: 14px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-top: none;
 }
 
 .panel-story-grid {
@@ -2581,9 +2546,6 @@ body.store-page {
     .portfolio-header .line-header:last-of-type {
         margin: 8px -20px 0 -20px;
     }
-    .portfolio-header .line-header--filters {
-        margin: 10px -20px 10px -20px;
-    }
     .product-main {
         grid-template-columns: 1fr 1fr;
         margin-top: var(--page-padding);
@@ -2735,9 +2697,6 @@ body.store-page {
     .portfolio-header .line-header:last-of-type {
         margin: 8px -16px 0 -16px;
     }
-    .portfolio-header .line-header--filters {
-        margin: 10px -16px 10px -16px;
-    }
     .policy-main {
         gap: 24px;
     }
@@ -2774,13 +2733,6 @@ body.store-page {
     }
     .product-card {
         padding: 12px;
-    }
-    .portfolio-filter-row {
-        align-items: flex-start;
-        gap: 8px;
-    }
-    .portfolio-filter-label {
-        width: 100%;
     }
     .project-panel-inner {
         padding: 14px;
@@ -2845,10 +2797,6 @@ body.store-page {
 @media (max-width: 480px) {
     h1 {
         font-size: 1.4rem;
-    }
-    .chip {
-        font-size: 0.78rem;
-        padding: 6px 12px;
     }
     .marquee span {
         font-size: 0.9rem;
