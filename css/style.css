@@ -85,6 +85,15 @@ h1 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/* SplitType wraps every letter in its own element for the char-stagger
+   animation; without a word-level wrapper the browser can break a line
+   between any two letters. Keep each .word intact so wrapping only
+   happens between whole words. */
+h1 .word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 header h1 {
     color: #ffffff;
     mix-blend-mode: difference;
@@ -897,15 +906,20 @@ body.store-page {
 }
 
 .portfolio-grid {
-    margin: 12px -24px 0;
-    gap: 1px;
-    padding: 1px;
-    background: #000000;
-    border: 1px solid #000000;
+    margin: 40px 0 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px 32px;
+    padding: 0;
+    background: transparent;
+    border: 0;
 }
 
-.project-card {
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.portfolio-grid .project-card {
+    aspect-ratio: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-card.is-expanded {
@@ -915,7 +929,7 @@ body.store-page {
 
 .portfolio-grid .grid-cell {
     border: 0;
-    background: #0a0a0a;
+    background: transparent;
 }
 
 .project-panel {
@@ -1452,18 +1466,59 @@ body.store-page {
 
 .project-image {
     position: relative;
-    flex: 1;
-    min-height: 180px;
-    padding: 12px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background-image: linear-gradient(135deg, rgba(1, 255, 139, 0.12), rgba(0, 0, 0, 0.2)), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 18px), repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 18px), var(--project-image, none);
-    background-size: auto, auto, auto, cover;
-    background-position: center, center, center, center;
-    background-repeat: no-repeat, repeat, repeat, no-repeat;
+    aspect-ratio: 4 / 3;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background-color: #111111;
     overflow: hidden;
+}
+
+.project-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--project-image, none);
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(55%) brightness(0.9);
+    transform: scale(1.02);
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.project-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 45%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-view {
+    position: absolute;
+    left: 18px;
+    bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-view::after {
+    content: "\2192";
+    display: inline-block;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .project-index {
@@ -1477,22 +1532,27 @@ body.store-page {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     opacity: 0.7;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .project-card .product-meta {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 6px;
+    padding-top: 16px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
 
 .project-title {
-    font-size: 0.95rem;
+    font-size: 1.15rem;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .project-card .product-price {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-transform: none;
     letter-spacing: 0.02em;
     opacity: 0.65;
@@ -1501,6 +1561,29 @@ body.store-page {
 .project-card:hover .project-image,
 .project-card:focus-visible .project-image {
     border-color: rgba(1, 255, 139, 0.6);
+    box-shadow: 0 20px 44px rgba(1, 255, 139, 0.16);
+}
+
+.project-card:hover .project-image::before,
+.project-card:focus-visible .project-image::before {
+    transform: scale(1.08);
+    filter: grayscale(0%) brightness(1);
+}
+
+.project-card:hover .project-image::after,
+.project-card:focus-visible .project-image::after {
+    opacity: 1;
+}
+
+.project-card:hover .project-view,
+.project-card:focus-visible .project-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover .project-view::after,
+.project-card:focus-visible .project-view::after {
+    transform: translateX(4px);
 }
 
 .project-card:hover .project-stamp,
@@ -1509,9 +1592,35 @@ body.store-page {
     opacity: 1;
 }
 
+.project-card:hover,
+.project-card:focus-visible {
+    transform: translateY(-6px);
+}
+
 @media (hover: none) {
     .project-card:hover {
         transform: none;
+    }
+    .project-card:hover .project-image::before,
+    .project-card:focus-visible .project-image::before {
+        transform: scale(1.02);
+        filter: grayscale(55%) brightness(0.9);
+    }
+    .project-card:hover .project-image::after,
+    .project-card:focus-visible .project-image::after {
+        opacity: 0;
+    }
+    .project-card:hover .project-view,
+    .project-card:focus-visible .project-view {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-image::before,
+    .project-card {
+        transition: none;
     }
 }
 
@@ -2520,9 +2629,14 @@ body.store-page {
         margin: 0 -20px;
     }
     .portfolio-grid {
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-        width: calc(100% + 40px);
-        margin: 12px -20px 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 44px 24px;
+        width: auto;
+        margin: 32px 0 0;
+    }
+    .store-grid.portfolio-grid .grid-cell,
+    .store-grid.portfolio-grid .grid-cell:not(:nth-child(2n)) {
+        border: 0;
     }
     .grid-cell:not(:nth-child(2n)) {
         border-right: 0.5px solid rgba(255, 255, 255, 0.9);
@@ -2675,8 +2789,9 @@ body.store-page {
     }
     .portfolio-grid {
         grid-template-columns: 1fr;
-        width: calc(100% + 32px);
-        margin: 12px -16px 0;
+        gap: 36px;
+        width: auto;
+        margin: 24px 0 0;
     }
     .line-full {
         width: calc(100% + 32px);
